@@ -12,6 +12,10 @@ module.exports = (sequelize) => {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
+    isActive:{ //Para borrado logico
+      type:DataTypes.BOOLEAN,
+      defaultValue:true,
+    },
     category: {
       type: DataTypes.STRING,
       allowNull: true,

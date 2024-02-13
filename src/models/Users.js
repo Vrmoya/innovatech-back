@@ -9,6 +9,10 @@ module.exports = (sequelize) => {
       allowNull: false,
       autoIncrement: true,
   },
+  isActive:{ //Para borrado logico
+    type:DataTypes.BOOLEAN,
+    defaultValue:true,
+  },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
