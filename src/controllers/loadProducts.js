@@ -19,7 +19,7 @@ const loadProducts = async () => {
       delete products[i].category;
 
       const createdProduct = await Products.create(products[i]);;
-      const result = await createdProduct.setCategory(findedCategory);
+      const result = await createdProduct.addCategories(findedCategory);
     }
     console.log('Productos cargados exitosamente');
   } catch (error) {

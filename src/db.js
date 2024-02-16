@@ -60,7 +60,8 @@ const {User, Products,Categories } = sequelize.models;
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
-Products.belongsTo(Categories);
+Products.belongsToMany(Categories,{through:'Products_Categories'});
+Categories.belongsToMany(Products,{through:'Products_Categories'});
 
 module.exports = {
    ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
