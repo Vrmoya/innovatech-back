@@ -4,7 +4,7 @@ const AuthController = require('../controllers/AuthController');
 // const productos = require('../../tech.json');
 
 const  findAllProducts = require('../controllers/findAllProducts');
-const getProducById = require('../controllers/getProductById');
+const getProductById = require('../controllers/getProductById');
 const getProductByModel = require('../controllers/getProductByModel');
 
 //Ruta para obtener todos los productos

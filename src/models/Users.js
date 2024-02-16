@@ -50,7 +50,11 @@ module.exports = (sequelize) => {
           }
         }
       }
-    }
+    },
+    isAdmin: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
   });
 
   // Función para cifrar la contraseña antes de guardarla en la base de datos
