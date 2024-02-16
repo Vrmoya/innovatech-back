@@ -1,10 +1,14 @@
 require('dotenv').config();
+console.log(process.env.DB_USER, process.env.DB_PASSWORD, process.env.DB_HOST, process.env.DB_NAME);
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
+// console.log(DB_USER, DB_PASSWORD, DB_HOST, DB_NAME )
+
 
 const UserModel = require("./models/Users");
+const ProductsModel = require("./models/Products");
 
 
 
@@ -48,10 +52,11 @@ sequelize.models = Object.fromEntries(capsEntries);
 
 // Aca vendrian el llamado a los modelos
 UserModel(sequelize);
+ProductsModel(sequelize)
 
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
-const { } = sequelize.models;
+const {User, Products } = sequelize.models;
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);

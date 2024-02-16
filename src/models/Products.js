@@ -44,11 +44,11 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    videocard: {
+    videoCard: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    operatingsistem: {
+    operatingSystem: {
       type: DataTypes.STRING,
       allowNull: true,
     },
@@ -60,7 +60,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    batterylife: {
+    batteryLife: {
       type: DataTypes.STRING,
       allowNull: true,
     },
@@ -73,11 +73,7 @@ module.exports = (sequelize) => {
       allowNull: true,
     },
     description: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    ram: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: true,
     },
     internalmemory: {
@@ -85,14 +81,6 @@ module.exports = (sequelize) => {
       allowNull: true,
     },
     camera: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    weight: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    batterylife: {
       type: DataTypes.STRING,
       allowNull: true,
     },
@@ -112,27 +100,11 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    touchcontrol: {
+    touchControl: {
       type: DataTypes.STRING,
       allowNull: true,
     },
     microphone: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    weight: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    batterylife: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    compatibility: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    extrafunctions: {
       type: DataTypes.STRING,
       allowNull: true,
     },
@@ -144,20 +116,18 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    keycapdesign: {
+    keycapDesign: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    mediakeys: {
+    mediaKeys: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    wirelessrange: {
+    wirelessRange: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-
-
   });
 
   return Products;
