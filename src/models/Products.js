@@ -20,6 +20,10 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
+    image:{
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      allowNull:true ,
+    },
     processor: {
       type: DataTypes.STRING,
       allowNull: true,
