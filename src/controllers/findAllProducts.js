@@ -14,7 +14,8 @@ const findAllProducts = async (req, res) => {
       findAllProductsDB = await Products.findAll({
         include: [{
           model: Categories,
-          through: { attributes: [] } // This removes the association from being returned
+          through: { attributes: [] }, // This removes the association from being returned
+          attributes: ['name']
         }]
       });
     } else {
@@ -26,6 +27,7 @@ const findAllProducts = async (req, res) => {
         ],
         include: [{
           model: Categories,
+          as: 'categories',
           through: { attributes: [] }, // This removes the association from being returned
           where: {
             name: category
