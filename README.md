@@ -8,7 +8,7 @@ METHOD: GET
 
 Query Params: optional
 
-- none: all products
+- none: all products (can be ordered)
 
 - category
 
