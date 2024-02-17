@@ -12,8 +12,10 @@ const findAllProducts = async (req, res) => {
     let findAllProductsDB = [];
     if (!category || !order) {
       findAllProductsDB = await Products.findAll({
+        order: order ? [['model', order.toUpperCase()]] : [],
         include: [{
           model: Categories,
+          as: 'categories',
           through: { attributes: [] }, // This removes the association from being returned
           attributes: ['name']
         }]
