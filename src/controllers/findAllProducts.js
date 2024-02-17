@@ -21,8 +21,8 @@ const findAllProducts = async (req, res) => {
 
       //Caso: Hay category y order
       findAllProductsDB = await Products.findAll({
-        order:[
-          ['model',order.toUpperCase()]
+        order: [
+          ['model', order.toUpperCase()]
         ],
         include: [{
           model: Categories,
@@ -30,12 +30,15 @@ const findAllProducts = async (req, res) => {
           where: {
             name: category
           },
+          attributes: ['name']
         }]
       });
     }
     // console.log(findAllProductsDB);
     if (page && items)
       findedProducts = paginate(findAllProductsDB, items, page)
+    else
+      findedProducts = {data:findAllProductsDB}
     res.status(200).json(findedProducts);
 
   } catch (error) {
