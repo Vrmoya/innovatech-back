@@ -7,16 +7,25 @@
 
 module.exports = (allData, itemsPerPage, pageNumber) => {
     const object = {
-        data: [],
-        pageNumber,
+        data: allData,
+        pageNumber: Number(pageNumber),
         totalPages: null
     }
-    if (itemsPerPage <= 0)
-        throw new Error('itemsPerPage must be > 0')
-    object.totalPages = Math.ceil(allData.length / itemsPerPage);
-    if (object.totalPages < object.pageNumber || object.pageNumber <= 0)
-        return { ...object, error: 'Invalid page number' }
 
+    if (object.data.length === 0) {
+        object.error = 'No data founded'
+        return object
+    }
+
+    if (itemsPerPage <= 0) {
+        object.error = 'itemsPerPage must be > 0'
+        return object
+    }
+
+    object.totalPages = Math.ceil(allData.length / itemsPerPage);
+    if (object.totalPages < object.pageNumber || object.pageNumber <= 0) {
+        object.error = 'Invalid page number'
+    }
     object.data = allData.slice(itemsPerPage * (object.pageNumber - 1), itemsPerPage * object.pageNumber);
     return object
 }
