@@ -15,11 +15,16 @@ const loadProducts = async () => {
   try {
     // Insertar los productos en la base de datos
     for (let i = 0; i < products.length; i++) {
-      const findedCategory = await Categories.findOne({where:{name:products[i].category}})
-      delete products[i].category;
+      const findedCategory = await Categories.findOrCreate({
+        where:{name:products[i].category},
+        defaults:{
+          name:products[i].category,
 
+        }
+      })
+      delete products[i].category;
       const createdProduct = await Products.create(products[i]);;
-      const result = await createdProduct.addCategories(findedCategory);
+      const result = await createdProduct.addCategories(findedCategory[0].dataValues.id);
     }
     console.log('Productos cargados exitosamente');
   } catch (error) {
