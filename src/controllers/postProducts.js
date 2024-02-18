@@ -1,4 +1,5 @@
-const { Products } = require('../db');
+const { Products, Categories } = require('../db');
+const { Op } = require("sequelize");
 
 const postProducts = async (req, res) => {
     try {
@@ -7,6 +8,11 @@ const postProducts = async (req, res) => {
 
         // Crea un nuevo producto en la base de datos utilizando Sequelize
         const newProduct = await Products.create(productData);
+
+        const categoryInstances = await Categories.findAll({
+            where: { name: { [Op.in]: productData.categories } },
+        });
+        await newProduct.addCategories(categoryInstances);
 
         // Si tienes éxito, envía una respuesta
         res.status(201).json({ mensaje: 'Producto creado exitosamente', producto: newProduct });
