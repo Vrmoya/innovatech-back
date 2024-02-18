@@ -14,6 +14,7 @@ module.exports = (sequelize) => {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
+            unique: true,
             validate: {
                 isAlpha: {
                     msg: "El nombre solo puede contener letras"

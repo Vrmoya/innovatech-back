@@ -23,10 +23,16 @@ const postProducts = async (req, res) => {
         const categoryInstances = await Categories.findAll({
             where: { name: { [Op.in]: categoryNames } },
         });
-        await newProduct.addCategories(categoryInstances);
+
+        console.log(categoryInstances); // Registra las instancias de categoría recuperadas
+
+        await newProduct.addCategories(categoryInstances); // Utiliza addCategories en lugar de addCategory
+
+        const updatedProduct = await Products.findByPk(newProduct.id, { include: ['categories'] }); // Recupera el producto después de añadir las categorías
+        console.log(updatedProduct); // Registra el producto actualizado
 
         // Si tienes éxito, envía una respuesta
-        res.status(201).json({ mensaje: 'Producto creado exitosamente', producto: newProduct });
+        res.status(201).json({ mensaje: 'Producto creado exitosamente', producto: updatedProduct });
     } catch (error) {
         console.error(error);
         res.status(500).json({ mensaje: 'Error al crear el producto' });
