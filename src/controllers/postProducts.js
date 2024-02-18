@@ -6,11 +6,22 @@ const postProducts = async (req, res) => {
         // Accede a los datos del cuerpo de la solicitud
         const productData = req.body;
 
+        // Comprueba si se proporcionó un precio y categorías
+        if (!productData.price) {
+            return res.status(400).json({ mensaje: 'El precio es requerido' });
+        }
+        if (!productData.categories || !Array.isArray(productData.categories)) {
+            return res.status(400).json({ mensaje: 'Las categorías son requeridas y deben ser un array' });
+        }
+
+        // Extrae los nombres de las categorías
+        const categoryNames = productData.categories.map(category => category.name);
+
         // Crea un nuevo producto en la base de datos utilizando Sequelize
         const newProduct = await Products.create(productData);
 
         const categoryInstances = await Categories.findAll({
-            where: { name: { [Op.in]: productData.categories } },
+            where: { name: { [Op.in]: categoryNames } },
         });
         await newProduct.addCategories(categoryInstances);
 
