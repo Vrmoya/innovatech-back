@@ -15,7 +15,8 @@
     "batteryLife": "Up to 10 hours",
     "connectivity": "Wi-Fi, Bluetooth",
     "warranty": "12 months",
-    "description": "The iPad Pro offers a seamless user experience with its sleek design and intuitive interface. Its large 12.9-inch display provides vibrant visuals, while the powerful M1 processor ensures smooth performance for all tasks. With up to 10 hours of battery life, it's perfect for work or entertainment on the go."
+    "description": "The iPad Pro offers a seamless user experience with its sleek design and intuitive interface. Its large 12.9-inch display provides vibrant visuals, while the powerful M1 processor ensures smooth performance for all tasks. With up to 10 hours of battery life, it's perfect for work or entertainment on the go.",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708221045/Innova%20Tech/wjcvklxkirwpla1llq8z.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708221052/Innova%20Tech/tfeq6np38cx2rlaimwci.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708221059/Innova%20Tech/h3q4rbqtcgnuacacx4qe.png"]
   },
   {
     "category": "tablet",
@@ -33,7 +34,8 @@
     "batteryLife": "Up to 14 hours",
     "connectivity": "Wi-Fi, Bluetooth",
     "warranty": "12 months",
-    "description": "The Samsung Galaxy Tab S7+ is designed for users seeking a premium tablet experience. With its large, high-quality display and powerful performance, it's perfect for professionals, creatives, and multimedia enthusiasts. The included S Pen stylus enhances productivity and creativity, making it an ideal choice for those who need versatility on the go."
+    "description": "The Samsung Galaxy Tab S7+ is designed for users seeking a premium tablet experience. With its large, high-quality display and powerful performance, it's perfect for professionals, creatives, and multimedia enthusiasts. The included S Pen stylus enhances productivity and creativity, making it an ideal choice for those who need versatility on the go.",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708221294/Innova%20Tech/yqyk120xz88895hrk9yo.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708221299/Innova%20Tech/q7eifroeshp6rqbag6l6.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708221308/Innova%20Tech/qdpnvgcdmr8ywpebyo0m.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708221315/Innova%20Tech/rlc58keo0kiy7mr8gfls.png"]
   },
   {
     "category": "tablet",
@@ -51,7 +53,8 @@
     "batteryLife": "Up to 16 hours",
     "connectivity": "Wi-Fi, Bluetooth",
     "warranty": "12 months",
-    "description": "The Microsoft Surface Pro 8 offers a versatile computing experience tailored for productivity-focused users. Its sleek design and powerful performance make it ideal for professionals, students, and creatives who need a portable yet capable device. With its detachable keyboard and touch screen functionality, it seamlessly transitions between laptop and tablet modes, catering to a variety of work styles."
+    "description": "The Microsoft Surface Pro 8 offers a versatile computing experience tailored for productivity-focused users. Its sleek design and powerful performance make it ideal for professionals, students, and creatives who need a portable yet capable device. With its detachable keyboard and touch screen functionality, it seamlessly transitions between laptop and tablet modes, catering to a variety of work styles.",
+    "image": ["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708221552/Innova%20Tech/f7nlz06tx9kz1dufl1hc.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708221562/Innova%20Tech/u8h7ggf6c5pw0ksnlbvo.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708221557/Innova%20Tech/ouboeag6mftukaba6mo8.png" ]
   },
   {
     "category": "tablet",
@@ -69,7 +72,8 @@
     "batteryLife": "Up to 15 hours",
     "connectivity": "Wi-Fi, Bluetooth",
     "warranty": "12 months",
-    "description": "The Lenovo Tab P11 Pro is designed for users seeking a balance of productivity and entertainment. With its sleek design and powerful performance, it's perfect for both work and play. The tablet's vibrant display and long battery life make it great for multimedia consumption, while its productivity features cater to users who need to get things done on the go. Whether you're streaming content, browsing the web, or working on documents, the Tab P11 Pro offers a versatile and enjoyable experience."
+    "description": "The Lenovo Tab P11 Pro is designed for users seeking a balance of productivity and entertainment. With its sleek design and powerful performance, it's perfect for both work and play. The tablet's vibrant display and long battery life make it great for multimedia consumption, while its productivity features cater to users who need to get things done on the go. Whether you're streaming content, browsing the web, or working on documents, the Tab P11 Pro offers a versatile and enjoyable experience.",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708221828/Innova%20Tech/qwppyitr6ab7ourxrsag.png"]
   },
   {
     "category": "tablet",
@@ -87,7 +91,8 @@
     "batteryLife": "Up to 10 hours",
     "connectivity": "Wi-Fi, Bluetooth",
     "warranty": "12 months",
-    "description": "The Lenovo Tab P11 Pro offers a sleek design, powerful performance, and long battery life, making it perfect for both work and entertainment. With its vibrant display and productivity features, it's ideal for users on the go seeking a versatile experience."
+    "description": "The Lenovo Tab P11 Pro offers a sleek design, powerful performance, and long battery life, making it perfect for both work and entertainment. With its vibrant display and productivity features, it's ideal for users on the go seeking a versatile experience.",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708222156/Innova%20Tech/dbkgz389p23m2irqi3ic.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708222162/Innova%20Tech/goxfv3ttlmhae9kaj5ti.png"]
   },
   {
     "category": "tablet",
@@ -105,7 +110,8 @@
     "batteryLife": "Up to 12 hours",
     "connectivity": "Wi-Fi, Bluetooth",
     "warranty": "12 months",
-    "description": "The Amazon Fire HD 10 is a budget-friendly tablet ideal for casual users who enjoy multimedia content and basic app usage. With its 10.1-inch display and long battery life, it's perfect for streaming, browsing, and reading. Running on Fire OS, it provides access to various apps and entertainment through the Amazon Appstore."
+    "description": "The Amazon Fire HD 10 is a budget-friendly tablet ideal for casual users who enjoy multimedia content and basic app usage. With its 10.1-inch display and long battery life, it's perfect for streaming, browsing, and reading. Running on Fire OS, it provides access to various apps and entertainment through the Amazon Appstore.",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708222298/Innova%20Tech/knb5nstmybflhtluodt8.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708222302/Innova%20Tech/qfgie6dmbxa1vtyqogei.png"]
   },
   {
     "category": "tablet",
@@ -123,7 +129,8 @@
     "batteryLife": "Up to 10 hours",
     "connectivity": "Wi-Fi, Bluetooth",
     "warranty": "12 months",
-    "description": "The Google Pixel Slate is a versatile tablet designed for users who prioritize productivity and entertainment. With its 12.3-inch display and powerful performance, it's perfect for multitasking and creativity. Running on Chrome OS, it offers access to a wide range of apps and services from the Google ecosystem. Whether you're working on documents, streaming content, or browsing the web, the Pixel Slate delivers a seamless and intuitive user experience."
+    "description": "The Google Pixel Slate is a versatile tablet designed for users who prioritize productivity and entertainment. With its 12.3-inch display and powerful performance, it's perfect for multitasking and creativity. Running on Chrome OS, it offers access to a wide range of apps and services from the Google ecosystem. Whether you're working on documents, streaming content, or browsing the web, the Pixel Slate delivers a seamless and intuitive user experience.",
+    "image": ["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708222536/Innova%20Tech/arknb4pxhcwhpe5v4em4.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708222541/Innova%20Tech/zgkpmnetx9segjszbuyl.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708222527/Innova%20Tech/vmxdlejorx4lrsksowvb.png"]
   },
   {
     "category": "tablet",
@@ -141,7 +148,8 @@
     "batteryLife": "Up to 17 hours",
     "connectivity": "Wi-Fi, Bluetooth",
     "warranty": "12 months",
-    "description": "The Sony Xperia Z4 Tablet combines sleek design with powerful performance, perfect for on-the-go entertainment and productivity."
+    "description": "The Sony Xperia Z4 Tablet combines sleek design with powerful performance, perfect for on-the-go entertainment and productivity.",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708222739/Innova%20Tech/tpcw9cs3qyuk3n9bln9x.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708222743/Innova%20Tech/wjitprhqcoqqhxy69fhv.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708222732/Innova%20Tech/knlmoupunbmmjdodkm7y.png"]
   },
   {
     "category": "tablet",
@@ -159,7 +167,8 @@
     "batteryLife": "Up to 10 hours",
     "connectivity": "Wi-Fi, Bluetooth",
     "warranty": "12 months",
-    "description": "The Asus ZenPad 3S 10 offers a sleek and lightweight design, making it ideal for users who prioritize portability. With its crisp display and smooth performance, it's perfect for multimedia consumption and light productivity tasks on the go."
+    "description": "The Asus ZenPad 3S 10 offers a sleek and lightweight design, making it ideal for users who prioritize portability. With its crisp display and smooth performance, it's perfect for multimedia consumption and light productivity tasks on the go.",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708222954/Innova%20Tech/b80ultq7apwkv2z0nwav.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708222944/Innova%20Tech/l4e9g31mgye7tyj0xc9a.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708222949/Innova%20Tech/ae6mppikpkacrxsoeulv.png" ]
   },
   {
     "category": "tablet",
@@ -177,7 +186,8 @@
     "batteryLife": "Up to 12 hours",
     "connectivity": "Wi-Fi, Bluetooth",
     "warranty": "12 months",
-    "description": "The Xiaomi Mi Pad 5 is tailored for users seeking a blend of performance and affordability. With its spacious display and powerful hardware, it's ideal for multimedia enthusiasts and casual gamers. The tablet's sleek design and long battery life ensure a satisfying user experience for entertainment and productivity tasks alike."
+    "description": "The Xiaomi Mi Pad 5 is tailored for users seeking a blend of performance and affordability. With its spacious display and powerful hardware, it's ideal for multimedia enthusiasts and casual gamers. The tablet's sleek design and long battery life ensure a satisfying user experience for entertainment and productivity tasks alike.",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223159/Innova%20Tech/mxmbjlc0srvbjgwbbdz1.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223162/Innova%20Tech/dtd9btl5x1qcftnlmc29.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223166/Innova%20Tech/do1eh05oxkhc2gn0ihjt.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223173/Innova%20Tech/kims2lopgkizhh5pfgum.png"]
   },
   {
     "category": "tablet",
@@ -195,7 +205,8 @@
     "batteryLife": "Up to 16 hours",
     "connectivity": "Wi-Fi, Bluetooth",
     "warranty": "12 months",
-    "description": "The HP Elite x2 G8 is a premium tablet tailored for business professionals who demand performance and versatility. With its sleek design, robust security features, and long battery life, it's perfect for on-the-go productivity and collaboration."
+    "description": "The HP Elite x2 G8 is a premium tablet tailored for business professionals who demand performance and versatility. With its sleek design, robust security features, and long battery life, it's perfect for on-the-go productivity and collaboration.",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223425/Innova%20Tech/x0bllu3kocdfk5lqeyjq.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223416/Innova%20Tech/caywdlsthbaryk4y7iaa.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223421/Innova%20Tech/kge8el13nea5nwsxxl7i.png"]
   },
   {
     "category": "tablet",
@@ -213,7 +224,8 @@
     "batteryLife": "Up to 14 hours",
     "connectivity": "Wi-Fi, Bluetooth",
     "warranty": "12 months",
-    "description": "The Razer Book 13 is a stylish and high-performance laptop designed for professionals. It offers powerful internals for demanding tasks, a vibrant display, immersive sound, and long battery life, all in a compact form factor."
+    "description": "The Razer Book 13 is a stylish and high-performance laptop designed for professionals. It offers powerful internals for demanding tasks, a vibrant display, immersive sound, and long battery life, all in a compact form factor.",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223663/Innova%20Tech/aqz1u4lxtt4cwuivk119.png"]
   },
   {
     "category": "tablet",
@@ -231,7 +243,8 @@
     "batteryLife": "Up to 14 hours",
     "connectivity": "Wi-Fi, Bluetooth",
     "warranty": "12 months",
-    "description": "The Dell Latitude 7320 is a versatile and powerful tablet designed for professionals on the go. With its high-performance hardware, crisp display, and longLasting battery, it's ideal for productivity tasks and business applications."
+    "description": "The Dell Latitude 7320 is a versatile and powerful tablet designed for professionals on the go. With its high-performance hardware, crisp display, and longLasting battery, it's ideal for productivity tasks and business applications.",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223842/Innova%20Tech/ry6bpp6lendvlzdguzoc.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223851/Innova%20Tech/x8rsutixhgwr1zb5in31.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223847/Innova%20Tech/wxn7j0bmrvdt1jln2ud2.png"]
   },
   {
     "category": "tablet",
@@ -249,7 +262,8 @@
     "batteryLife": "Up to 9 hours",
     "connectivity": "Wi-Fi, Bluetooth",
     "warranty": "12 months",
-    "description": "The Acer Chromebook Tab 10 is ideal for students and educators alike, offering a versatile and portable solution for learning and collaboration. With its lightweight design and durable construction, it's perfect for use in classrooms or on the move. The Chrome OS provides seamless access to educational apps and resources, while the included stylus enhances productivity and creativity."
+    "description": "The Acer Chromebook Tab 10 is ideal for students and educators alike, offering a versatile and portable solution for learning and collaboration. With its lightweight design and durable construction, it's perfect for use in classrooms or on the move. The Chrome OS provides seamless access to educational apps and resources, while the included stylus enhances productivity and creativity.",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708224043/Innova%20Tech/zziyiuvxytvcqvbopiry.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708224055/Innova%20Tech/mr8g6duxjrk0xz3yw6tk.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708224048/Innova%20Tech/cxd9vbtl1t1impoghj0o.png"]
   },
   {
     "category": "tablet",
@@ -267,7 +281,8 @@
     "batteryLife": "Up to 10 hours",
     "connectivity": "Wi-Fi, Bluetooth",
     "warranty": "12 months",
-    "description": "The LG G Pad 5 10.1 is crafted for users who prioritize portability and versatility. Its compact design and lightweight build make it perfect for on-the-go use, whether for work or entertainment. With a vibrant display and reliable performance, it offers a seamless experience for browsing, streaming, and light productivity tasks."
+    "description": "The LG G Pad 5 10.1 is crafted for users who prioritize portability and versatility. Its compact design and lightweight build make it perfect for on-the-go use, whether for work or entertainment. With a vibrant display and reliable performance, it offers a seamless experience for browsing, streaming, and light productivity tasks.",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708224275/Innova%20Tech/ggmyhdkp43di12fyijaq.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708224280/Innova%20Tech/r4o0ihx3glnp8mvq7v7c.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708224269/Innova%20Tech/sepxhgj6qs381cbzaelx.png" ]
   },
   
   {
@@ -284,7 +299,8 @@
     "warranty": "12 months",
     "hardcore": "512GB",
     "description": "The HP Spectre x360 is a powerful and versatile laptop that offers a sleek design and impressive performance.",
-    "price": "2.299"
+    "price": "2.299",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216569/Innova%20Tech/crur2z6yabza3hppnm3q.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216573/Innova%20Tech/luu8vzvobdis4eytx4cl.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216577/Innova%20Tech/nogov4ovtajl38pfciu2.png"]
   },
   {
     "category": "laptop",
@@ -300,7 +316,8 @@
     "warranty": "12 months",
     "hardcore": "256GB",
     "description": "The Dell XPS 13 is a compact and lightweight laptop that delivers a seamless user experience.",
-    "price": "1.299"
+    "price": "1.299",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216548/Innova%20Tech/m95tjzxlru9ujxtxyope.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216552/Innova%20Tech/ms4ez4escu5riijt9ago.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216556/Innova%20Tech/x1db3gjekorxul7qimjy.png"]
   },
   {
     "category": "laptop",
@@ -316,7 +333,8 @@
     "warranty": "12 months",
     "hardcore": "256GB",
     "description": "The MacBook Pro is a high-performance laptop that offers exceptional speed and power.",
-    "price": "1.199"
+    "price": "1.199",
+    "image": ["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216610/Innova%20Tech/ujzbaiv9eylveh04hstg.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216614/Innova%20Tech/swjzst1rabpqulo1h9iu.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216619/Innova%20Tech/ivjksuqgcgzy3okn5qsx.png"]
   },
   {
     "category": "laptop",
@@ -332,7 +350,8 @@
     "warranty": "12 months",
     "hardcore": "512GB",
     "description": "The Lenovo ThinkPad X1 Carbon is a durable and lightweight laptop that is perfect for business professionals.",
-    "price": "1.599"
+    "price": "1.599",
+    "image": ["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216583/Innova%20Tech/alptc75x9o5hlrbylbuj.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216588/Innova%20Tech/isdzf8xyqbrsx8jf61lx.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216595/Innova%20Tech/g5rhvrshmwbdjwmltxvq.png"]
   },
   {
     "category": "laptop",
@@ -348,7 +367,8 @@
     "warranty": "12 months",
     "hardcore": "1TB",
     "description": "The Asus ROG Zephyrus G14 is a gaming laptop that offers powerful performance and a stunning display.",
-    "price": "1.999"
+    "price": "1.999",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216494/Innova%20Tech/qmcdub4uynhk9oiw1rr2.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216498/Innova%20Tech/cqnkfrhtmwv6qufihqv3.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216500/Innova%20Tech/xqxpw9p8xxfnp5ylughl.png"]
   },
   {
     "category": "laptop",
@@ -364,7 +384,8 @@
     "warranty": "12 months",
     "hardcore": "512GB",
     "description": "The Acer Swift 3 is a budget-friendly laptop that delivers reliable performance and long battery life.",
-    "price": "699"
+    "price": "699",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216487/Innova%20Tech/jgviuklcdudsvalfotr1.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216491/Innova%20Tech/xusfvu0uu3hxthudfozl.png"]
   },
   {
     "category": "laptop",
@@ -380,7 +401,8 @@
     "warranty": "12 months",
     "hardcore": "512GB",
     "description": "The Microsoft Surface Laptop 4 is a stylish and versatile laptop that is ideal for productivity and entertainment.",
-    "price": "1799"
+    "price": "1799",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216639/Innova%20Tech/u27wl5gvh96re3y2d6ar.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216644/Innova%20Tech/fgrzvtaqtctaeolb4grd.png"]
 
   },
   {
@@ -397,7 +419,8 @@
     "warranty": "12 months",
     "hardcore": "1TB",
     "description": "The Razer Blade 15 is a high-performance gaming laptop that offers stunning visuals and smooth gameplay.",
-    "price": "2299"
+    "price": "2299",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216648/Innova%20Tech/yckbkxlrcla9tgzr4zro.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216653/Innova%20Tech/zrereqrdcm5ymfz1ery5.png"]
     
   },
   {
@@ -414,7 +437,8 @@
     "warranty": "12 months",
     "hardcore": "256GB",
     "description": "The HP Envy x360 is a versatile and affordable laptop that is perfect for everyday use.",
-    "price": "1899"
+    "price": "1899",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216560/Innova%20Tech/murd4rg0q301vs0x8hxe.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216564/Innova%20Tech/d8gevhzpsbd4ti3sxdfd.png"]
   },
   {
     "category": "laptop",
@@ -430,7 +454,8 @@
     "warranty": "12 months",
     "hardcore": "256GB",
     "description": "The Dell Inspiron 15 is a budget-friendly laptop that offers reliable performance and a large display.",
-    "price": "1879"
+    "price": "1879",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216515/Innova%20Tech/ggozjkis6zi8kstci0bq.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216545/Innova%20Tech/nya73dpuvmdyxwny8ghb.png"]
   },
   {
     "category": "laptop",
@@ -446,7 +471,8 @@
     "warranty": "12 months",
     "hardcore": "512GB",
     "description": "The Lenovo Yoga C940 is a 2-in-1 laptop that combines power and versatility in a sleek and portable design.",
-    "price": "1299"
+    "price": "1299",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216600/Innova%20Tech/sq1hhabqjdqsg5u2mijw.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216605/Innova%20Tech/wc5yljt77sai5ux5tqjf.png"]
   },
   {
     "category": "laptop",
@@ -462,7 +488,8 @@
     "warranty": "12 months",
     "hardcore": "512GB",
     "description": "The Asus VivoBook S14 is a lightweight and stylish laptop that is perfect for students and professionals on the go.",
-    "price": "879"
+    "price": "879",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216505/Innova%20Tech/qgrasiblflvfzzwmwln3.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216510/Innova%20Tech/ezmxqow42npcjv5antyx.png"]
   },
   {
     "category": "laptop",
@@ -478,7 +505,8 @@
     "warranty": "12 months",
     "hardcore": "1TB",
     "description": "The Acer Predator Helios 300 is a gaming laptop that offers high-performance gaming and advanced cooling technology.",
-    "price": "900"
+    "price": "900",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216451/Innova%20Tech/afujteq1bmwk2deixgch.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216484/Innova%20Tech/f74firvf2w6nitswalk5.png"]
   },
   {
     "category": "laptop",
@@ -494,7 +522,8 @@
     "warranty": "12 months",
     "hardcore": "512GB",
     "description": "The Microsoft Surface Book 3 is a powerful and versatile laptop that can be used as a tablet or a laptop.",
-    "price": "1190"
+    "price": "1190",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216623/Innova%20Tech/b4p4ylte2mebs9yxm1cl.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216633/Innova%20Tech/bmnoun3vqyaqglawo4iu.png"]
   },
   {
     "category": "laptop",
@@ -510,7 +539,8 @@
     "warranty": "12 months",
     "hardcore": "512GB",
     "description": "The Razer Blade Stealth 13 is a compact and powerful laptop that is perfect for gaming and productivity.",
-    "price": "2088"
+    "price": "2088",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216656/Innova%20Tech/gfzgibulyyoznqxbmenb.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216661/Innova%20Tech/zn5tswny3dwxlqbtoh0v.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708216663/Innova%20Tech/c2oh1f9zaabszek2a2az.png"]
   },
   {
     "category": "smartphone",
@@ -527,7 +557,8 @@
     "InternalMemory": "128GB, 256GB, 512GB",
     "description": "The iPhone 13 brings a new level of power and performance with its A16 Bionic chip and stunning Super Retina XDR display.",
     "price": "999",
-    "Camera": "12MP + 12MP dual rear cameras, 12MP front camera"
+    "Camera": "12MP + 12MP dual rear cameras, 12MP front camera",
+    "image": ["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708219155/Innova%20Tech/mamtnratpcvr0zcohxjs.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708219163/Innova%20Tech/xhpzktaghfx5s2zwur0p.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708219174/Innova%20Tech/wxdbwbrs5gng5yw8j7zp.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708219183/Innova%20Tech/pstcipcufa2onsnrrlqs.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708219198/Innova%20Tech/ozqh4eoussegoxrusbua.png" ]
   },
   {
     "category": "smartphone",
@@ -544,7 +575,9 @@
     "InternalMemory": "128GB, 256GB, 512GB",
     "description": "The Samsung Galaxy S22 is a powerful Android smartphone with a stunning display and a versatile camera system.",
     "price": "899",
-    "Camera": "50MP + 12MP + 12MP triple rear cameras, 10MP front camera"
+    "Camera": "50MP + 12MP + 12MP triple rear cameras, 10MP front camera",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223708/Innova%20Tech/muljqpo8mw2qqfohv9ua.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223716/Innova%20Tech/i0pmtzpcxw7ekzrbyz8v.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223722/Innova%20Tech/krjppui5kpwx7rhguvbc.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223737/Innova%20Tech/wj7rcr7fiakszj8w2uil.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708223745/Innova%20Tech/fzhefic0dxpzab0hbn60.png"]
+  
   },
   {
     "category": "smartphone",
@@ -561,7 +594,8 @@
     "InternalMemory": "128GB, 256GB",
     "description": "The Google Pixel 7 is a high-end Android smartphone with an exceptional camera and a clean software experience.",
     "price": "799",
-    "Camera": "12.2MP + 16MP dual rear cameras, 8MP front camera"
+    "Camera": "12.2MP + 16MP dual rear cameras, 8MP front camera",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708224322/Innova%20Tech/s3jnceneiesrise1u9qw.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708224330/Innova%20Tech/bi9nfasslacfyg9exk2y.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708224342/Innova%20Tech/k9bfmendkrgtwkoogmxl.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708224352/Innova%20Tech/eiuxzdgve0y0iouea5y3.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708224367/Innova%20Tech/o1jluseqvcf7mizr6ujq.png"]
   },
   {
     "category": "smartphone",
@@ -578,7 +612,8 @@
     "InternalMemory": "128GB, 256GB, 512GB",
     "description": "The Huawei P60 is a flagship smartphone with a powerful processor and a stunning OLED display.",
     "price": "899",
-    "Camera": "50MP + 12MP + 8MP triple rear cameras, 32MP front camera"
+    "Camera": "50MP + 12MP + 8MP triple rear cameras, 32MP front camera",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708275239/Innova%20Tech/o1qpojvpm7h2zckzo73s.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708275249/Innova%20Tech/a3eatn75siwl1pxagfxp.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708275262/Innova%20Tech/o6ljrqprst8zs68h7oxw.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708275273/Innova%20Tech/p2tsjcb9i4xmomgitvxt.png" ]
   },
   {
     "category": "smartphone",
@@ -595,7 +630,8 @@
     "InternalMemory": "128GB, 256GB, 512GB",
     "description": "The OnePlus 10 is a premium Android smartphone with a powerful processor and a smooth 120Hz display.",
     "price": "899",
-    "Camera": "64MP + 12MP + 8MP triple rear cameras, 32MP front camera"
+    "Camera": "64MP + 12MP + 8MP triple rear cameras, 32MP front camera",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708275451/Innova%20Tech/upqggqvkguqsreqpjyio.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708275469/Innova%20Tech/n5btakpxpeqr8oumuiqx.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708275492/Innova%20Tech/pmmvmcnb2wlx4cdqy3fn.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708275501/Innova%20Tech/rbmmuteoxtbla8oycisi.png" ]
   },
   {
     "category": "smartphone",
@@ -612,7 +648,8 @@
     "InternalMemory": "128GB, 256GB, 512GB",
     "description": "The Xiaomi Mi 12 is a feature-packed Android smartphone with a high-resolution display and a powerful processor.",
     "price": "999",
-    "Camera": "108MP + 12MP + 8MP triple rear cameras, 32MP front camera"
+    "Camera": "108MP + 12MP + 8MP triple rear cameras, 32MP front camera",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708275852/Innova%20Tech/xxpmhuftieztc9hsmgeq.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708275861/Innova%20Tech/fgdqwbxlngdu92ox03zl.png"]
   },
   {
     "category": "smartphone",
@@ -629,7 +666,8 @@
     "InternalMemory": "256GB, 512GB",
     "description": "The Sony Xperia 1 III is a flagship Android smartphone with a stunning 4K HDR OLED display and a versatile camera system.",
     "price": "1,299",
-    "Camera": "12MP + 12MP + 12MP triple rear cameras, 8MP front camera"
+    "Camera": "12MP + 12MP + 12MP triple rear cameras, 8MP front camera",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708275996/Innova%20Tech/cqxrtqnmxubb31qdo8yf.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276002/Innova%20Tech/su8azuega6ffu2pfvqhd.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276008/Innova%20Tech/uzvx6nlqyd6p5hbctjfz.png"]
   },
   {
     "category": "smartphone",
@@ -646,7 +684,8 @@
     "InternalMemory": "128GB, 256GB, 512GB",
     "description": "The LG G10 is a flagship Android smartphone with a sleek design and a powerful processor.",
     "price": "899",
-    "Camera": "48MP + 12MP + 8MP triple rear cameras, 16MP front camera"
+    "Camera": "48MP + 12MP + 8MP triple rear cameras, 16MP front camera",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276134/Innova%20Tech/cep6tinbdsjalmhbp8l5.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276141/Innova%20Tech/wvhar91csin8afql0spe.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276148/Innova%20Tech/ugdpoxpgbearprotcxew.png"]
   },
   {
     "category": "smartphone",
@@ -663,7 +702,8 @@
     "InternalMemory": "128GB, 256GB, 512GB",
     "description": "The Motorola Edge 30 is a premium Android smartphone with a large display and a powerful processor.",
     "price": "999",
-    "Camera": "108MP + 12MP + 8MP triple rear cameras, 32MP front camera"
+    "Camera": "108MP + 12MP + 8MP triple rear cameras, 32MP front camera",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276312/Innova%20Tech/omg9ln3jcropcjutdmzb.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276319/Innova%20Tech/jqe6ulyuzlq6b7cg1wtd.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276325/Innova%20Tech/qbmwusvktmlisxjy6aii.png"]
   },
   {
     "category": "smartphone",
@@ -697,7 +737,8 @@
     "InternalMemory": "128GB, 256GB, 512GB",
     "description": "The Oppo Find X5 is a high-end Android smartphone with a stunning display and a powerful processor.",
     "price": "1,099",
-    "Camera": "50MP + 12MP + 8MP triple rear cameras, 32MP front camera"
+    "Camera": "50MP + 12MP + 8MP triple rear cameras, 32MP front camera",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276413/Innova%20Tech/jgxekfnltfed85qewle6.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276421/Innova%20Tech/mj2d5rsnbuuahhet0xi8.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276427/Innova%20Tech/koyjruif4zgexpe6rbib.png"]
   },
   {
     "category": "smartphone",
@@ -714,7 +755,8 @@
     "InternalMemory": "128GB, 256GB, 512GB",
     "description": "The Vivo X70 Pro is a premium Android smartphone with a large AMOLED display and a versatile camera system.",
     "price": "1,199",
-    "Camera": "108MP + 12MP + 8MP triple rear cameras, 32MP front camera"
+    "Camera": "108MP + 12MP + 8MP triple rear cameras, 32MP front camera",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276629/Innova%20Tech/vv0wlti6y7rubtmkofyo.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276635/Innova%20Tech/putroy8ozobvrxiyr2d1.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276641/Innova%20Tech/yyoowzifimvijy0wfh4l.png" ]
   },
   {
     "category": "headphone",
@@ -730,7 +772,8 @@
     "extraFunctions": "Amazon Alexa, Google Assistant, touch control",
     "waterproof": "No",
     "touchControl": "Yes",
-    "microphone": "Yes"
+    "microphone": "Yes",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708274551/Innova%20Tech/nmm8ixkbey9hsgfpvevh.svg"]
   },
   {
     "category": "headphone",
@@ -746,7 +789,8 @@
     "extraFunctions": "Google Assistant, Alexa, touch control",
     "waterproof": "No",
     "touchControl": "Yes",
-    "microphone": "Yes"
+    "microphone": "Yes",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708274510/Innova%20Tech/avmj4j9n2hz6pzvfpldw.svg"]
   },
   {
     "category": "headphone",
@@ -762,7 +806,8 @@
     "extraFunctions": "Siri, touch control",
     "waterproof": "No",
     "touchControl": "Yes",
-    "microphone": "Yes"
+    "microphone": "Yes",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708274172/Innova%20Tech/xjtiwisioaazoddvost7.svg"]
   },
   {
     "category": "headphone",
@@ -778,7 +823,9 @@
     "extraFunctions": "Alexa, Siri, Google Assistant, touch control",
     "waterproof": "Yes",
     "touchControl": "Yes",
-    "microphone": "Yes"
+    "microphone": "Yes",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708274515/Innova%20Tech/x3nbpzqmmo8adlbvthmh.svg"]
+
   },
   {
     "category": "headphone",
@@ -794,7 +841,9 @@
     "extraFunctions": "Google Assistant, Alexa, touch control",
     "waterproof": "No",
     "touchControl": "Yes",
-    "microphone": "Yes"
+    "microphone": "Yes",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708274546/Innova%20Tech/rcaxsaphw0wsoynzq9nq.svg"]
+
   },
   {
     "category": "headphone",
@@ -810,7 +859,8 @@
     "extraFunctions": "Siri, touch control",
     "waterproof": "No",
     "touchControl": "Yes",
-    "microphone": "Yes"
+    "microphone": "Yes",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708274506/Innova%20Tech/ko7jkwebk5u4moqwkqq1.svg"]
   },
   {
     "category": "headphone",
@@ -826,7 +876,8 @@
     "extraFunctions": "Bixby, touch control",
     "waterproof": "Yes",
     "touchControl": "Yes",
-    "microphone": "Yes"
+    "microphone": "Yes",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708274542/Innova%20Tech/sybdo05ndjvffgkxk7no.svg"]
   },
   {
     "category": "headphone",
@@ -842,7 +893,8 @@
     "extraFunctions": "Google Assistant, touch control",
     "waterproof": "No",
     "touchControl": "Yes",
-    "microphone": "Yes"
+    "microphone": "Yes",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708274094/Innova%20Tech/hlahkfuh0jm423jjc9vh.svg"]
   },
   {
     "category": "headphone",
@@ -858,7 +910,8 @@
     "extraFunctions": "Discord-certified, ANC, touch control",
     "waterproof": "No",
     "touchControl": "Yes",
-    "microphone": "Yes"
+    "microphone": "Yes",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708274518/Innova%20Tech/pziwtaj9bbks7guoflax.svg"]
   },
   {
     "category": "headphone",
@@ -874,7 +927,8 @@
     "extraFunctions": "OpenListening mode, touch control",
     "waterproof": "No",
     "touchControl": "Yes",
-    "microphone": "Yes"
+    "microphone": "Yes",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708274535/Innova%20Tech/d1kduniidjrzdtoxvtch.svg"]
   },
   {
     "category": "headphone",
@@ -890,7 +944,8 @@
     "extraFunctions": "Quick Attention Mode, touch control",
     "waterproof": "No",
     "touchControl": "Yes",
-    "microphone": "Yes"
+    "microphone": "Yes",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708274539/Innova%20Tech/hygxd5eso11b4rqsfgar.svg"]
   },
   {
     "category": "headphone",
@@ -906,7 +961,8 @@
     "extraFunctions": "Touch control",
     "waterproof": "No",
     "touchControl": "Yes",
-    "microphone": "Yes"
+    "microphone": "Yes",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708274503/Innova%20Tech/e4exl8kz3zosuzptouvn.svg"]
   },
   {
     "category": "headphone",
@@ -922,7 +978,8 @@
     "extraFunctions": "Google Assistant, touch control",
     "waterproof": "No",
     "touchControl": "Yes",
-    "microphone": "Yes"
+    "microphone": "Yes",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708274521/Innova%20Tech/cqy9dxuiu5sz7plnn4yk.svg"]
   },
   {
     "category": "headphone",
@@ -938,7 +995,8 @@
     "extraFunctions": "Touch control",
     "waterproof": "Yes",
     "touchControl": "Yes",
-    "microphone": "Yes"
+    "microphone": "Yes",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708274531/Innova%20Tech/codjx8k3eifqdfqsdsh9.svg"]
   },
   {
     "category": "keyboard",
@@ -957,7 +1015,8 @@
     "design": "Full Size",
     "keycapDesign": "Double-shot",
     "mediaKeys": "Yes",
-    "wirelessRange": "15 meters"
+    "wirelessRange": "15 meters",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276057/Innova%20Tech/skhiqaljvvsfelru3fqz.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276060/Innova%20Tech/a4pzx7m3mm1jkiixxhis.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276062/Innova%20Tech/mrmq8uzspjmwfuiknsua.png"]
   },
   {
     "category": "keyboard",
@@ -976,7 +1035,8 @@
     "design": "Full Size",
     "keycapDesign": "Low-profile",
     "mediaKeys": "Yes",
-    "wirelessRange": "10 meters"
+    "wirelessRange": "10 meters",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276806/Innova%20Tech/auqpjvkknhpiho4lkfaz.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276812/Innova%20Tech/bzkadqi8nmglmmgoc12m.png"]
   },
   {
     "category": "keyboard",
@@ -995,7 +1055,8 @@
     "design": "Full Size",
     "keycapDesign": "Doubleshot ABS",
     "mediaKeys": "Yes",
-    "wirelessRange": "15 meters"
+    "wirelessRange": "15 meters",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276878/Innova%20Tech/wqko4flbfwfobhwh3pvy.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276885/Innova%20Tech/xhbh1yomzxbjmee27p22.png"]
     
   },
   {
@@ -1015,7 +1076,8 @@
     "design": "Full Size",
     "keycapDesign": "Doubleshot ABS",
     "mediaKeys": "Yes",
-    "wirelessRange": "20 meters"
+    "wirelessRange": "20 meters",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708277071/Innova%20Tech/ngqfdlx0ebromkpubcrn.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708277079/Innova%20Tech/cewukyuzefrtizqc5ume.png"]
   },
   {
     "category": "keyboard",
@@ -1034,7 +1096,8 @@
     "design": "Compact",
     "keycapDesign": "Double-shot PBT",
     "mediaKeys": "No",
-    "wirelessRange": "10 meters"
+    "wirelessRange": "10 meters",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708277175/Innova%20Tech/dxinr4rohwnne2q3pzq1.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708277185/Innova%20Tech/djpnbrz3m37jpbp1rnjk.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708277195/Innova%20Tech/z7fcbw2rpv4kljhx9p5u.png"]
     
   },
   {
@@ -1056,7 +1119,6 @@
     "keycapDesign": "Doubleshot ABS",
     "mediaKeys": "No",
     "wirelessRange": "10 meters"
-    
   },
   {
     "category": "keyboard",
@@ -1076,7 +1138,8 @@
     "design": "Full Size",
     "keycapDesign": "Doubleshot PBT",
     "mediaKeys": "Yes",
-    "wirelessRange": "11 meters"
+    "wirelessRange": "11 meters",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708277402/Innova%20Tech/ui6orzviflbxreyimpxg.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708277409/Innova%20Tech/ik4gwjslutyngkt5eive.png" ]
     
   },
   {
@@ -1097,7 +1160,8 @@
     "design": "Full Size",
     "keycapDesign": "Doubleshot ABS",
     "mediaKeys": "Yes",
-    "wirelessRange": "25 meters"
+    "wirelessRange": "25 meters",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708277666/Innova%20Tech/vbbnncn3tab5ybmsgcse.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708277673/Innova%20Tech/jmm8fbxwzcgfmfutbs3f.png","https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708277679/Innova%20Tech/fqnabbrajtjcgo5weufd.png" ]
     
   },
   {
@@ -1118,7 +1182,8 @@
     "design": "Full Size",
     "keycapDesign": "Doubleshot ABS",
     "mediaKeys": "Yes",
-    "wirelessRange": "12 meters"
+    "wirelessRange": "12 meters",
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276065/Innova%20Tech/xrtrptn3q5tt9v0wxvuq.png"]
     
   },
   {
@@ -1139,12 +1204,10 @@
     "design": "Tenkeyless",
     "keycapDesign": "Doubleshot ABS",
     "mediaKeys": "Yes",
-    "wirelessRange": "22 meters"
+    "wirelessRange": "22 meters",
+    
+    "image":["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276068/Innova%20Tech/uknk6ulrnvyvuzxleezl.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276072/Innova%20Tech/bwm3c6rpd2p6ricc3dqz.png", "https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708276076/Innova%20Tech/kquyietp5dct86fowww2.png"]
   }
 ]
 
 
-
-
-
-    
