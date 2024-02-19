@@ -9,40 +9,27 @@ const findAllProducts = async (req, res) => {
     let findedProducts = [];
 
     //Caso: Todos los productos
-    let findAllProductsDB = [];
-    if (!category || !order) {
-      findAllProductsDB = await Products.findAll({
-        order: order ? [['price', order.toUpperCase()]] : [],
-        include: [{
-          model: Categories,
-          as: 'categories',
-          through: { attributes: [] }, // This removes the association from being returned
-          attributes: ['name']
-        }]
-      });
-    } else {
+    const findAllProductsDbQuery = {
+      order: order ? [['price', order.toUpperCase()]] : [],
+      include: [{
+        model: Categories,
+        as: 'categories',
+        through: { attributes: [] }, // This removes the association from being returned
+        attributes: ['name']
+      }]
+    };
 
-      //Caso: Hay category y order
-      findAllProductsDB = await Products.findAll({
-        order: [
-          ['price', order.toUpperCase()]
-        ],
-        include: [{
-          model: Categories,
-          as: 'categories',
-          through: { attributes: [] }, // This removes the association from being returned
-          where: {
-            name: category
-          },
-          attributes: ['name']
-        }]
-      });
+    if(category){
+      findAllProductsDbQuery.include[0].where={name:category}
     }
+
+    findAllProductsDB = await Products.findAll(findAllProductsDbQuery);
+
     // console.log(findAllProductsDB);
     if (page && items)
       findedProducts = paginate(findAllProductsDB, items, page)
     else
-      findedProducts = {data:findAllProductsDB}
+      findedProducts = { data: findAllProductsDB }
     res.status(200).json(findedProducts);
 
   } catch (error) {
