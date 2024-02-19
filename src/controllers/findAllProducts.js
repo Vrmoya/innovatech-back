@@ -12,7 +12,7 @@ const findAllProducts = async (req, res) => {
     let findAllProductsDB = [];
     if (!category || !order) {
       findAllProductsDB = await Products.findAll({
-        order: order ? [['model', order.toUpperCase()]] : [],
+        order: order ? [['price', order.toUpperCase()]] : [],
         include: [{
           model: Categories,
           as: 'categories',
@@ -25,7 +25,7 @@ const findAllProducts = async (req, res) => {
       //Caso: Hay category y order
       findAllProductsDB = await Products.findAll({
         order: [
-          ['model', order.toUpperCase()]
+          ['price', order.toUpperCase()]
         ],
         include: [{
           model: Categories,
