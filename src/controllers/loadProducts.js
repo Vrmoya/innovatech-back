@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { Products, Categories } = require("../db"); // Asegúrate de ajustar la ruta al modelo de Products
+const { Products, Categories } = require("../db");
 const getProductById = require('./getProductById');
 
 const loadProducts = async () => {
@@ -16,9 +16,9 @@ const loadProducts = async () => {
     // Insertar los productos en la base de datos
     for (let i = 0; i < products.length; i++) {
       const findedCategory = await Categories.findOrCreate({
-        where:{name:products[i].category},
-        defaults:{
-          name:products[i].category,
+        where: { name: products[i].category },
+        defaults: {
+          name: products[i].category,
 
         }
       })
