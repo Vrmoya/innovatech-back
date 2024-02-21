@@ -1,16 +1,16 @@
 // const axios = require("axios");
 const { Products, Categories } = require("../db");
 const paginate = require("../helpers/paginate");
+const { Op } = require("sequelize");
 // const { PATH_ROUTES_PRODUCTS } = require("../assets/utils/constants");
 
 const findAllProducts = async (req, res) => {
-  const { category, order, page, items } = req.query
+  const { category, order, page, items, model } = req.query
   try {
     let findedProducts = [];
 
     //Caso: Todos los productos
     const findAllProductsDbQuery = {
-      order: order ? [['price', order.toUpperCase()]] : [],
       include: [{
         model: Categories,
         as: 'categories',
@@ -19,13 +19,17 @@ const findAllProducts = async (req, res) => {
       }]
     };
 
-    if(category){
-      findAllProductsDbQuery.include[0].where={name:category}
-    }
+    if (order)
+      findAllProductsDbQuery.order = [['price', order.toUpperCase()]]
+    if (category)
+      findAllProductsDbQuery.include[0].where = { name: category }
+    if (model)
+      findAllProductsDbQuery.where = { model: { [Op.iLike]: `%${model}%` } }
 
+    //Pedido a la DB
     findAllProductsDB = await Products.findAll(findAllProductsDbQuery);
 
-    // console.log(findAllProductsDB);
+    //Paginado
     if (page && items)
       findedProducts = paginate(findAllProductsDB, items, page)
     else
