@@ -31,9 +31,9 @@ const findAllProducts = async (req, res) => {
 
     //Paginado
     if (page && items)
-      findedProducts = paginate(findAllProductsDbQuery, items, page)
+      findedProducts = paginate(findAllProductsDB, items, page)
     else
-      findedProducts = { data: findAllProductsDbQuery }
+      findedProducts = { data: findAllProductsDB }
     res.status(200).json(findedProducts);
 
   } catch (error) {
