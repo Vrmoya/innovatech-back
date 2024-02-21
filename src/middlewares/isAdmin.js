@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const { Users } = require('../db.js');
+const { User } = require('../db.js');
 const authConfig = require('../config/auth.js');
 
 const isAdmin = async (req, res, next) => {
@@ -14,7 +14,7 @@ const isAdmin = async (req, res, next) => {
             return res.status(500).json({ auth: false, message: 'Falló la autenticación del token.' });
         }
 
-        Users.findByPk(decoded.id)
+        User.findByPk(decoded.user.id) // Aquí está el cambio
             .then(user => {
                 if (!user) {
                     return res.status(404).json({ message: 'No se encontró el usuario.' });

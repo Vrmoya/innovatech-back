@@ -16,6 +16,7 @@ router.get('/model', getProductByModel);
 router.post('/products', postProducts);
 
 //Ruta para el registro de administradores
+router.post('/api/admin/firstregister', AuthController.firstSignUpAdmin);
 router.post('/api/admin/register', isAdmin, AuthController.signUpAdmin);
 
 // Rutas para el inicio de sesión y el registro con correo electrónico y contraseña
