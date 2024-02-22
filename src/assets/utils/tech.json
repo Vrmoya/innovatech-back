@@ -1105,7 +1105,6 @@
     "model": "HyperX Alloy FPS Pro",
     "weight": "0.9 kg",
     "batteryLife": "24 hours",
-    
     "warranty": "2 years",
     "description": "Tenkeyless Mechanical Gaming Keyboard",
     "price": "69.99",
@@ -1118,7 +1117,8 @@
     "design": "Tenkeyless",
     "keycapDesign": "Doubleshot ABS",
     "mediaKeys": "No",
-    "wirelessRange": "10 meters"
+    "wirelessRange": "10 meters",
+    "image": ["https://res.cloudinary.com/dfhk5g0yv/image/upload/v1708456477/Innova%20Tech/grzj0m6u2lv2gfmdff3x.jpg"]
   },
   {
     "category": "keyboard",
