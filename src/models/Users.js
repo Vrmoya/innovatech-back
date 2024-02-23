@@ -1,7 +1,5 @@
 const { DataTypes } = require('sequelize');
 
-
-
 module.exports = (sequelize) => {
   const User = sequelize.define('User', {
     id: {
@@ -9,21 +7,19 @@ module.exports = (sequelize) => {
       primaryKey: true,
       allowNull: false,
       autoIncrement: true,
-  },
-  isActive:{ //Para borrado logico
-    type:DataTypes.BOOLEAN,
-    defaultValue:true,
-  },
+    },
+    isActive: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isAlpha: {
-          msg: "El nombre solo puede contener letras"
-        },
+        is: /^[a-zA-Z\s]+$/, // Permite letras y espacios
         len: {
           args: [2, 255],
-          msg: "El nombre tiene que ser minimamente de dos caracteres"
+          msg: "El nombre tiene que ser mínimo de dos caracteres"
         }
       }
     },
@@ -44,11 +40,6 @@ module.exports = (sequelize) => {
         len: {
           args: [6, 255],
           msg: "La contraseña tiene que tener mínimo 6 caracteres"
-        },
-        isStrongPassword(value) {
-          if (!/(?=.*[A-Z])(?=.*\d)/.test(value)) {
-            throw new Error('La contraseña debe comenzar con una letra mayúscula y contener al menos un número');
-          }
         }
       }
     },
@@ -67,8 +58,6 @@ module.exports = (sequelize) => {
       allowNull: true,
     },
   });
-
-  
 
   return User;
 };

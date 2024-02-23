@@ -1,3 +1,4 @@
+const passport = require('passport');
 const { Router } = require('express');
 const router = Router();
 const {
@@ -33,8 +34,30 @@ router.post('/api/signin', signIn);
 router.post('/api/signup', signUp);
 
 // Rutas para el inicio de sesión con Google y GitHub
-router.get('/auth/google', googleSignIn, googleSignInCallback);
-router.get('/auth/google/callback', googleSignInCallback);
-router.get('/auth/github', githubSignIn, githubSignInCallback);
-router.get('/auth/github/callback', githubSignInCallback);
+router.get("/auth/google", (req, res, next) => {
+  console.log("Request to start Google authentication received");
+  // Agregar registros de depuración para verificar los parámetros de la solicitud, si es necesario
+  next(); // Pasa al siguiente middleware, que es passport.authenticate("google")
+}, passport.authenticate("google", { scope: ["profile", "email"] }));
+
+
+router.get(
+  "/auth/google/callback",
+  (req, res, next) => {
+    console.log('Request to /auth/google/callback received');
+    console.log('Request query parameters:', req.query);
+    console.log('User authenticated by Google:', req.user);
+    next(); // Llama a la siguiente función en la cadena de middlewares
+  },
+  passport.authenticate("google", { failureRedirect: "/login" }),
+  (req, res) => {
+    // Llamar a googleSignInCallback pasando req.user como argumento
+    googleSignInCallback(req.user, res);
+  }
+);
+
+
+
+router.get('/auth/github', passport.authenticate('github'), githubSignIn);
+router.get('/auth/github/callback', passport.authenticate('github'), githubSignInCallback);
 module.exports = router;
