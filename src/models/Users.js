@@ -39,7 +39,7 @@ module.exports = (sequelize) => {
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         len: {
           args: [6, 255],
@@ -56,20 +56,19 @@ module.exports = (sequelize) => {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
     },
+    googleId: {
+      type: DataTypes.STRING,
+      unique: true,
+      allowNull: true,
+    },
+    githubId: {
+      type: DataTypes.STRING,
+      unique: true,
+      allowNull: true,
+    },
   });
 
-  // Función para cifrar la contraseña antes de guardarla en la base de datos
-  // User.beforeCreate(async (user) => {
-  //   if (user.password) {
-  //     try {
-  //       const hashedPassword = await bcrypt.hash(user.password, Number.parseInt(authConfig.rounds));
-  //       user.password = hashedPassword;
-  //     } catch (error) {
-  //       console.error('Error al hacer hash de la contraseña:', error);
-  //       throw error;  // Esto asegura que el error se propague y cause una respuesta de error 500
-  //     }
-  //   }
-  // });
+  
 
-  // return User;
+  return User;
 };

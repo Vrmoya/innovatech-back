@@ -19,17 +19,18 @@ server.use((req, res, next) => {
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+  res.header('Content-Security-Policy', "style-src 'self' https://www.gstatic.com");
   next();
 });
 
 server.use('/', routes);
 
 // Error catching endware.
-server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
-  const status = err.status || 500;
-  const message = err.message || err;
-  console.error(err);
-  res.status(status).send(message);
+server.use((err, req, res, next) => {
+  if (res) {
+    res.status(err.status || 500).json({ message: err.message });
+  } else {
+    console.error(err);
+  }
 });
-
 module.exports = server;
