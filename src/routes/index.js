@@ -6,6 +6,7 @@ const getProductById = require('../controllers/getProductById');
 const getProductByModel = require('../controllers/getProductByModel');
 const isAdmin = require('../middlewares/isAdmin');
 const postProducts = require('../controllers/postProducts.js');
+const paymentGateway = require('../controllers/paymentGateway.js')
 
 //Ruta para obtener todos los productos
 router.get('/products', findAllProducts);
@@ -28,5 +29,8 @@ router.get('/auth/google', AuthController.googleSignIn);
 router.get('/auth/google/callback', AuthController.googleSignInCallback);
 router.get('/auth/github', AuthController.githubSignIn);
 router.get('/auth/github/callback', AuthController.githubSignInCallback);
+
+// Ruta para Mercado Pago
+router.post("/create_preference", paymentGateway)
 
 module.exports = router;
