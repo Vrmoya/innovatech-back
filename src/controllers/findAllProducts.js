@@ -19,14 +19,14 @@ const findAllProducts = async (req, res) => {
       }]
     };
 
-    if(category){
-      findAllProductsDbQuery.include[0].where={name:category}
+    if (category) {
+      findAllProductsDbQuery.include[0].where = { name: category }
     }
 
     findAllProductsDB = await Products.findAll(findAllProductsDbQuery);
 
     // console.log(findAllProductsDB);
-    if (page && items)
+    if (page && items > 0)
       findedProducts = paginate(findAllProductsDB, items, page)
     else
       findedProducts = { data: findAllProductsDB }

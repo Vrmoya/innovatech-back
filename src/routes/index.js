@@ -6,6 +6,7 @@ const getProductById = require('../controllers/getProductById');
 const getProductByModel = require('../controllers/getProductByModel');
 const isAdmin = require('../middlewares/isAdmin');
 const postProducts = require('../controllers/postProducts.js');
+const postCart = require('../controllers/postCart.js');
 
 //Ruta para obtener todos los productos
 router.get('/products', findAllProducts);
@@ -14,6 +15,9 @@ router.get('/model', getProductByModel);
 
 //Ruta para crear productos
 router.post('/products', postProducts);
+
+//Ruta para crear carrito y sus items
+router.post('/cart', postCart)
 
 //Ruta para el registro de administradores
 router.post('/api/admin/register', isAdmin, AuthController.signUpAdmin);
