@@ -34,11 +34,10 @@ router.post('/api/signin', signIn);
 router.post('/api/signup', signUp);
 
 // Rutas para el inicio de sesión con Google y GitHub
-router.get("/auth/google", (req, res, next) => {
-  console.log("Request to start Google authentication received");
-  // Agregar registros de depuración para verificar los parámetros de la solicitud, si es necesario
-  next(); // Pasa al siguiente middleware, que es passport.authenticate("google")
-}, passport.authenticate("google", { scope: ["profile", "email"] }));
+router.get(
+  "/auth/google",
+  passport.authenticate("google", { scope: ["profile", "email"] })
+);
 
 
 router.get(
@@ -50,9 +49,9 @@ router.get(
     next(); // Llama a la siguiente función en la cadena de middlewares
   },
   passport.authenticate("google", { failureRedirect: "/login" }),
-  (req, res) => {
+  (req, res, next) => { // <- Agrega 'next' como argumento
     // Llamar a googleSignInCallback pasando req.user como argumento
-    googleSignInCallback(req.user, res);
+    googleSignInCallback(req, res, next); // <- Pasa 'next'
   }
 );
 

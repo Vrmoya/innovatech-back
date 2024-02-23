@@ -19,7 +19,6 @@ const googleSignIn = (req, res, next) => {
 googleSignIn.failure = (req, res) => {
   res.status(401).json({ message: req.flash("error") });
 };
-
 const googleSignInCallback = async (req, res, next) => {
   console.log('Request received at /auth/google/callback');
   console.log('Request query parameters:', req.query);
@@ -37,33 +36,41 @@ const googleSignInCallback = async (req, res, next) => {
   console.log('Random password:', randomPassword);
   
   try {
-    const email = req.user.emails?.[0]?.value; // Corregir acceso a la propiedad emails
+    const email = req.user.email; // Corregir acceso a la propiedad emails
     console.log('Email:', email); // Agregar console.log para mostrar el email
     
-    const [existingUser, created] = await User.findOrCreate({
-      where: { googleId: req.user.id },
-      defaults: {
-        name: req.user.displayName,
+    const displayName = req.user.displayName || 'Unknown';
+    
+    // Verificar si ya existe un usuario con el mismo correo electrónico
+    const existingUser = await User.findOne({ where: { email: email } });
+    
+    if (existingUser) {
+      // El usuario ya existe, puedes actualizar su información si es necesario
+      console.log('User already exists:', existingUser);
+      
+      // Aquí puedes decidir cómo manejar el caso de un usuario existente,
+      // ya sea actualizando su información o respondiendo con un mensaje de error
+      return res.status(200).json({ message: 'User already exists', user: existingUser });
+    } else {
+      // El usuario no existe, puedes crear uno nuevo
+      const newUser = await User.create({
+        name: displayName,
         email: email || 'example@example.com',
         password: randomPassword,
         isAdmin: false,
-      },
-      raw: true,
-    });
-    console.log('User found or created:', { existingUser, created });
-    console.log('New User:', existingUser);
-    
-    // res.redirect("/");
-    console.log('Redirecting user to homepage');
-    // return a JSON response instead
-    res.status(200).json({ message: 'Google authentication successful', user: existingUser });
+        googleId: req.user.id.toString(),
+      });
+      
+      console.log('New user created:', newUser);
+      
+      // Responder con el nuevo usuario creado
+      return res.status(200).json({ message: 'New user created', user: newUser });
+    }
   } catch (error) {
-    console.error('Error in creating user:', error);
-    res.status(500).json({ message: 'Error in creating user' });
+    console.error('Error in creating or finding user:', error);
+    return res.status(500).json({ message: 'Error in creating or finding user' });
   }
 };
-
-
 
 
 module.exports = {
