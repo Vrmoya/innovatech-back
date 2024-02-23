@@ -19,6 +19,10 @@
     "dotenv": "^16.4.4",
     "express": "^4.18.2",
     "express-session": "^1.18.0",
+<<<<<<< HEAD
+=======
+    "google-auth-library": "^9.6.3",
+>>>>>>> victor
     "jsonwebtoken": "^9.0.2",
     "mercadopago": "^2.0.7",
     "morgan": "^1.10.0",
