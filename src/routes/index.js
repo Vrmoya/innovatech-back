@@ -55,8 +55,21 @@ router.get(
   }
 );
 
+router.get('/auth/github', passport.authenticate('github', { scope: ["profile", "email"] }));
+router.get(
+  "/auth/github/callback",
+  (req, res, next) => {
+    console.log('Request to /auth/github/callback received');
+    console.log('Request query parameters:', req.query);
+    console.log('User authenticated by Github:', req.user);
+    next(); // Llama a la siguiente función en la cadena de middlewares
+  },
+  passport.authenticate("github", { failureRedirect: "/login" }),
+  (req, res, next) => { // <- Agrega 'next' como argumento
+    // Llamar a googleSignInCallback pasando req.user como argumento
+    githubSignInCallback(req, res, next); // <- Pasa 'next'
+  }
+);
 
 
-router.get('/auth/github', passport.authenticate('github'), githubSignIn);
-router.get('/auth/github/callback', passport.authenticate('github'), githubSignInCallback);
 module.exports = router;
