@@ -3,6 +3,8 @@ const { conn } = require('./src/db.js');
 const PORT = 3001
 const loadProducts = require('./src/controllers/loadProducts.js');
 const loadCategories = require('./src/controllers/loadCategories.js')
+
+
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
   console.log("DATABASE CONNECTED")
