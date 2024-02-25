@@ -1,6 +1,6 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const PORT = 3001
+const { PORT } = process.env;
 const loadProducts = require('./src/controllers/loadProducts.js');
 const loadCategories = require('./src/controllers/loadCategories.js')
 
