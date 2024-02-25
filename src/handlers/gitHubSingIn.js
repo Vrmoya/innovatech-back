@@ -43,26 +43,35 @@ const githubSignIn = async (req, res) => {
     const existingUser = await User.findOne({ where: { email: email } });
     
     if (existingUser) {
-      // El usuario ya existe, puedes actualizar su información si es necesario
-      console.log('User already exists:', existingUser);
+      console.log("User already exists:", existingUser);
+
+      // Generar un token JWT para el usuario existente
+      const token = jwt.sign({ userId: existingUser.id }, 'secret', { expiresIn: '1h' }); // Cambiar 'secret' por una clave secreta segura
+
+      // Enviar el token como respuesta al cliente
+      res.cookie('token', token, { httpOnly: true }); // Almacenar el token en una cookie segura y httponly
       
-      // Aquí puedes decidir cómo manejar el caso de un usuario existente,
-      // ya sea actualizando su información o respondiendo con un mensaje de error
-      return res.status(200).json({ message: 'User already exists', user: existingUser });
+      
+      console.log('Redirecting to http://localhost:5173/home');
+      return res.redirect("http://localhost:5173/home");
     } else {
       // El usuario no existe, puedes crear uno nuevo
       const newUser = await User.create({
         name: displayName,
-        email: email || 'example@example.com',
+        email: email || "example@example.com",
         password: randomPassword,
         isAdmin: false,
         googleId: req.user.id.toString(),
       });
-      
-      console.log('New user created:', newUser);
-      
-      // Responder con el nuevo usuario creado
-      return res.status(200).json({ message: 'New user created', user: newUser });
+
+      console.log("New user created:", newUser);
+
+      // Generar un token JWT para el nuevo usuario
+      const token = jwt.sign({ userId: newUser.id }, 'secret', { expiresIn: '1h' }); // Cambiar 'secret' por una clave secreta segura
+
+      // Enviar el token como respuesta al cliente
+      res.cookie('token', token, { httpOnly: true }); // Almacenar el token en una cookie segura y httponly
+      return res.redirect("http://localhost:5173/home");
     }
   } catch (error) {
     console.error('Error in creating or finding user:', error);
