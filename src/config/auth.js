@@ -1,6 +1,6 @@
 require("dotenv").config();
-const { BACK_HOST, BACK_PORT } = process.env;
-const baseURL = `http://${BACK_HOST}:${BACK_PORT}`
+const { HOST, PORT } = process.env;
+const baseURL = `http://${HOST}:${PORT}`
 const passport = require('passport');
 const { User } = require("../db.js");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
