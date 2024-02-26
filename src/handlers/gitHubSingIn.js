@@ -42,8 +42,6 @@ const githubSignInCallback = async (req, res) => {
 
     const displayName = req.user.displayName || 'Unknown';
 
-    const image = req.user.image;
-
     // Verificar si ya existe un usuario con el mismo correo electrónico
     const existingUser = await User.findOne({ where: { email: email } });
 
@@ -65,7 +63,6 @@ const githubSignInCallback = async (req, res) => {
         name: displayName,
         email: email || "example@example.com",
         password: randomPassword,
-        image:image,
         isAdmin: false,
         googleId: req.user.id.toString(),
       });

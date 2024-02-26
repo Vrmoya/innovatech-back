@@ -16,7 +16,6 @@ const signUpAdmin = async (req, res) => {
           name: req.body.name,
           email: req.body.email,
           password: hashedPassword,
-          image: req.body.image,
           isAdmin: true,
         })
         .then((user) => {
