@@ -3,7 +3,7 @@ console.log(process.env.DB_USER, process.env.DB_PASSWORD, process.env.DB_HOST, p
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_PORT } = process.env;
 // console.log(DB_USER, DB_PASSWORD, DB_HOST, DB_NAME )
 
 
@@ -17,7 +17,7 @@ const ProductsModel = require("./models/Products");
 
 
 const sequelize = new Sequelize(
-   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
+   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`,
    {
       logging: false, // set to console.log to see the raw SQL queries
       native: false, // lets Sequelize know we can use pg-native for ~30% more speed
@@ -56,12 +56,18 @@ ProductsModel(sequelize)
 
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
-const { User, Products, Categories } = sequelize.models;
+const { User, Products, Categories, Cart, CartItem } = sequelize.models;
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
 Products.belongsToMany(Categories, { as: 'categories', through: 'Products_Categories' });
 Categories.belongsToMany(Products, { through: 'Products_Categories' });
+User.hasMany(Cart, { as: 'carts', foreignKey: 'userId' });
+Cart.belongsTo(User, { as: 'user', foreignKey: 'userId' });
+Cart.hasMany(CartItem, { as: 'cartItems' });
+CartItem.belongsTo(Products, { as: 'products' });
+CartItem.belongsTo(Cart, { as: 'cart', foreignKey: 'cartId' });
+
 
 module.exports = {
    ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');

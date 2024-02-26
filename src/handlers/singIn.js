@@ -1,3 +1,6 @@
+require('dotenv').config();
+const { FRONT_HOST, FRONT_PORT } = process.env;
+const baseFrontURL = `http://${FRONT_HOST}:${FRONT_PORT}`
 const authConfig = require("../config/auth.js");
 const { User } = require("../db.js");
 const bcrypt = require("bcrypt");
@@ -39,8 +42,7 @@ const signIn = async (req, res) => {
             expiresIn: authConfig.expires,
           });
 
-          res.status(200).json({ auth: true, token: token });
-        }
+          return res.redirect(baseFrontURL + "/home");}
       }
     }
   })
