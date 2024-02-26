@@ -11,6 +11,7 @@ const findAllProducts = async (req, res) => {
 
     //Caso: Todos los productos
     const findAllProductsDbQuery = {
+      where:{},
       include: [{
         model: Categories,
         as: 'categories',
@@ -28,12 +29,12 @@ const findAllProducts = async (req, res) => {
       findAllProductsDbQuery.include[0].where = { name: category }
     if (model)
       findAllProductsDbQuery.where = { model: { [Op.iLike]: `%${model}%` } }
-
+console.log(findAllProductsDbQuery);
     //Pedido a la DB
     findAllProductsDB = await Products.findAll(findAllProductsDbQuery);
 
     // console.log(findAllProductsDB);
-    if (page && items > 0)
+    // if (page && items > 0)
       //Paginado
       if (page && items)
         findedProducts = paginate(findAllProductsDB, items, page)
