@@ -39,8 +39,7 @@ const signIn = async (req, res) => {
             expiresIn: authConfig.expires,
           });
 
-          res.status(200).json({ auth: true, token: token });
-        }
+          res.redirect("http://localhost:5173/home");}
       }
     }
   })
