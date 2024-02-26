@@ -23,7 +23,7 @@ const signUp = async (req, res) => {
           //   user: user,
           //   token: token,
           // })
-          res.redirect("http://localhost:5173/home");;
+          res.redirect("http://localhost:5173/home");
         })
         .catch((err) => {
           res.status(500).json(err);

@@ -20,10 +20,11 @@ const signUpAdmin = async (req, res) => {
             expiresIn: authConfig.expires,
           });
   
-          res.json({
-            user: user,
-            token: token,
-          });
+          // res.json({
+          //   user: user,
+          //   token: token,
+          // });
+          res.redirect("http://localhost:5173/home");
         })
         .catch((err) => {
           res.status(500).json(err);
