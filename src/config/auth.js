@@ -18,7 +18,8 @@ passport.use(new GoogleStrategy({
       where: { googleId: profile.id },
       defaults: {
         name: profile.displayName,
-        email: profile.emails[0].value
+        email: profile.emails[0].value,
+        image: profile.photos[0].value
       }
     })
       .then(([user, created]) => {
