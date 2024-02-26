@@ -8,7 +8,7 @@ module.exports = (sequelize) => {
             autoIncrement: true,
         },
         name: {
-            type: dataTypes.STRING(100),
+            type: DataTypes.STRING(100),
             allowNull: false,
         },
         productId: {

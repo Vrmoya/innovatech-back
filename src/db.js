@@ -66,7 +66,7 @@ User.hasMany(Cart, { as: 'carts', foreignKey: 'userId' });
 Cart.belongsTo(User, { as: 'user', foreignKey: 'userId' });
 Cart.hasMany(CartItem, { as: 'cartItems' });
 CartItem.belongsTo(Products, { as: 'products' });
-CartItem.belongsTo(Cart, { as: 'cart' });
+CartItem.belongsTo(Cart, { as: 'cart', foreignKey: 'cartId' });
 
 
 module.exports = {
