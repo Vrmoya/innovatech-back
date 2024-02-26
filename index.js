@@ -1,6 +1,6 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const PORT = 3001
+const { PORT } = process.env;
 const loadProducts = require('./src/controllers/loadProducts.js');
 const loadCategories = require('./src/controllers/loadCategories.js')
 
@@ -9,7 +9,7 @@ const loadCategories = require('./src/controllers/loadCategories.js')
 conn.sync({ force: true }).then(() => {
   console.log("DATABASE CONNECTED")
   server.listen(PORT, () => {
-    console.log(`PORT SUCCESS`); 
+    console.log(PORT+` PORT SUCCESS`); 
     loadCategories();
     loadProducts();// eslint-disable-line no-console
   });

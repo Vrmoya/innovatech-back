@@ -1,7 +1,5 @@
 const { DataTypes } = require('sequelize');
 
-
-
 module.exports = (sequelize) => {
   const User = sequelize.define('User', {
     id: {
@@ -9,27 +7,25 @@ module.exports = (sequelize) => {
       primaryKey: true,
       allowNull: false,
       autoIncrement: true,
-  },
-  isActive:{ //Para borrado logico
-    type:DataTypes.BOOLEAN,
-    defaultValue:true,
-  },
+    },
+    isActive: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isAlpha: {
-          msg: "El nombre solo puede contener letras"
-        },
+        is: /^[a-zA-Z\s]+$/, // Permite letras y espacios
         len: {
           args: [2, 255],
-          msg: "El nombre tiene que ser minimamente de dos caracteres"
+          msg: "El nombre tiene que ser mínimo de dos caracteres"
         }
       }
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       unique: true,
       validate: {
         isEmail: {
@@ -39,16 +35,11 @@ module.exports = (sequelize) => {
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         len: {
           args: [6, 255],
           msg: "La contraseña tiene que tener mínimo 6 caracteres"
-        },
-        isStrongPassword(value) {
-          if (!/(?=.*[A-Z])(?=.*\d)/.test(value)) {
-            throw new Error('La contraseña debe comenzar con una letra mayúscula y contener al menos un número');
-          }
         }
       }
     },
@@ -56,20 +47,17 @@ module.exports = (sequelize) => {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
     },
+    googleId: {
+      type: DataTypes.STRING,
+      unique: true,
+      allowNull: true,
+    },
+    githubId: {
+      type: DataTypes.STRING,
+      unique: true,
+      allowNull: true,
+    },
   });
 
-  // Función para cifrar la contraseña antes de guardarla en la base de datos
-  // User.beforeCreate(async (user) => {
-  //   if (user.password) {
-  //     try {
-  //       const hashedPassword = await bcrypt.hash(user.password, Number.parseInt(authConfig.rounds));
-  //       user.password = hashedPassword;
-  //     } catch (error) {
-  //       console.error('Error al hacer hash de la contraseña:', error);
-  //       throw error;  // Esto asegura que el error se propague y cause una respuesta de error 500
-  //     }
-  //   }
-  // });
-
-  // return User;
+  return User;
 };
