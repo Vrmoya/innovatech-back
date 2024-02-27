@@ -46,6 +46,7 @@ passport.use(new GitHubStrategy({
       defaults: {
         name: profile.displayName,
         email: profile.emails ? profile.emails[0].value : null,
+        image: profile.photos[0].value
       }
     })
       .then(([user, created]) => {
