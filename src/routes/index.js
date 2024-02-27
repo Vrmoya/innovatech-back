@@ -76,7 +76,7 @@ router.get(
     githubSignInCallback(req, res, next); // <- Pasa 'next'
   }
 );
-router.get('get/github', userGithub)
+router.get('/get/github/:githubId', userGithub)
 
 // Ruta para Mercado Pago
 router.post("/create_preference", paymentGateway)

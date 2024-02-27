@@ -58,7 +58,8 @@ const githubSignInCallback = async (req, res) => {
 
 
       console.log('Redirecting to ' + baseFrontURL + '/home');
-      return res.redirect(baseFrontURL + "/home");
+      // return res.redirect(baseFrontURL + "/home");
+      return res.status(200).redirect(baseFrontURL + "/github/"+existingUser.githubId);
     } else {
       // El usuario no existe, puedes crear uno nuevo
       const newUser = await User.create({
