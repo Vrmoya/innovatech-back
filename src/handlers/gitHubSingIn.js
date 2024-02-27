@@ -78,7 +78,7 @@ const githubSignInCallback = async (req, res) => {
 
       // Enviar el token como respuesta al cliente
       res.cookie('token', token, { httpOnly: true }); // Almacenar el token en una cookie segura y httponly
-      return res.redirect(baseFrontURL + "/home");
+      return res.status(200).redirect(baseFrontURL + "/github/"+existingUser.githubId);
     }
   } catch (error) {
     console.error('Error in creating or finding user:', error);
