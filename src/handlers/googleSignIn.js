@@ -56,9 +56,9 @@ const googleSignInCallback = async (req, res, next) => {
       // Enviar el token como respuesta al cliente
       res.cookie('token', token, { httpOnly: true }); // Almacenar el token en una cookie segura y httponly
 
-
-      console.log('Redirecting to ' + baseFrontURL + '/home');
-      return res.redirect(baseFrontURL + "/home");
+      return res.status(200).redirect(baseFrontURL + "/google/"+existingUser.googleId);
+      // console.log('Redirecting to ' + baseFrontURL + '/home');
+      // return res.redirect(baseFrontURL + "/home");
     } else {
       // El usuario no existe, puedes crear uno nuevo
       const newUser = await User.create({
@@ -77,7 +77,8 @@ const googleSignInCallback = async (req, res, next) => {
 
       // Enviar el token como respuesta al cliente
       res.cookie('token', token, { httpOnly: true }); // Almacenar el token en una cookie segura y httponly
-      return res.redirect(baseFrontURL + "/home");
+      return res.status(200).redirect(baseFrontURL + "/google/"+existingUser.googleId);
+      // return res.redirect(baseFrontURL + "/home");
     }
   } catch (error) {
     console.error("Error in creating or finding user:", error);
