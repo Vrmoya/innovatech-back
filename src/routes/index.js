@@ -19,7 +19,7 @@ const postProducts = require('../controllers/postProducts.js');
 const postCart = require('../controllers/postCart.js');
 const paymentGateway = require('../controllers/paymentGateway.js')
 const userGithub = require('../controllers/userGithubById.js')
-
+const userGoogle = require('../controllers/userGoogleById.js')
 //Ruta para obtener todos los productos
 router.get('/products', findAllProducts);
 router.get('/products/:id', getProductById);
@@ -76,7 +76,8 @@ router.get(
     githubSignInCallback(req, res, next); // <- Pasa 'next'
   }
 );
-router.get('/get/github/:githubId', userGithub)
+router.get('/get/github/:githubId', userGithub);
+router.get('/get/google/:googleId', userGoogle)
 
 // Ruta para Mercado Pago
 router.post("/create_preference", paymentGateway)
