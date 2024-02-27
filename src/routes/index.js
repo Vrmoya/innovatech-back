@@ -18,6 +18,7 @@ const isAdmin = require('../middlewares/isAdmin');
 const postProducts = require('../controllers/postProducts.js');
 const postCart = require('../controllers/postCart.js');
 const paymentGateway = require('../controllers/paymentGateway.js')
+const userGithub = require('../controllers/userGithubById.js')
 
 //Ruta para obtener todos los productos
 router.get('/products', findAllProducts);
@@ -75,7 +76,7 @@ router.get(
     githubSignInCallback(req, res, next); // <- Pasa 'next'
   }
 );
-
+router.get('get/github', userGithub)
 
 // Ruta para Mercado Pago
 router.post("/create_preference", paymentGateway)
