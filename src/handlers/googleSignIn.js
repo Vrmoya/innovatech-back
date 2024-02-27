@@ -78,7 +78,6 @@ const googleSignInCallback = async (req, res, next) => {
       // Enviar el token como respuesta al cliente
       res.cookie('token', token, { httpOnly: true }); // Almacenar el token en una cookie segura y httponly
       return res.status(200).redirect(baseFrontURL + "/google/"+existingUser.googleId);
-      // return res.redirect(baseFrontURL + "/home");
     }
   } catch (error) {
     console.error("Error in creating or finding user:", error);
