@@ -5,7 +5,7 @@ const { Op } = require("sequelize");
 // const { PATH_ROUTES_PRODUCTS } = require("../assets/utils/constants");
 
 const findAllProducts = async (req, res) => {
-  const { category, order, page, items, model } = req.query
+  const { category, order, page, items, model, actives } = req.query
   try {
     let findedProducts = [];
 
@@ -29,6 +29,9 @@ const findAllProducts = async (req, res) => {
       findAllProductsDbQuery.include[0].where = { name: category }
     if (model)
       findAllProductsDbQuery.where = { model: { [Op.iLike]: `%${model}%` } }
+    console.log('Active is',actives);
+    if(actives !=='true')
+      findAllProductsDbQuery.where = {...findAllProductsDbQuery.where, isActive:true}
 console.log(findAllProductsDbQuery);
     //Pedido a la DB
     findAllProductsDB = await Products.findAll(findAllProductsDbQuery);
