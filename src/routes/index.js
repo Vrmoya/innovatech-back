@@ -20,6 +20,7 @@ const postCart = require('../controllers/postCart.js');
 const paymentGateway = require('../controllers/paymentGateway.js')
 const userGithub = require('../controllers/userGithubById.js')
 const userGoogle = require('../controllers/userGoogleById.js')
+const toggleProduct = require('../controllers/toggleProduct.js')
 //Ruta para obtener todos los productos
 router.get('/products', findAllProducts);
 router.get('/products/:id', getProductById);
@@ -34,11 +35,13 @@ router.post('/cart', postCart)
 //Ruta para el registro de administradores
 router.post('/api/admin/firstregister', firstSignUpAdmin);
 router.post('/api/admin/register', isAdmin, signUpAdmin);
+//
 
 // Rutas para el inicio de sesión y el registro con correo electrónico y contraseña
 router.post('/api/signin', signIn);
 router.post('/api/signup', signUp);
-
+// Toggle isActive producto
+router.post('/products/toggle',toggleProduct)
 // Rutas para el inicio de sesión con Google y GitHub
 router.get(
   "/auth/google",
