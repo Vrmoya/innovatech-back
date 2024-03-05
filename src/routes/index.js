@@ -19,7 +19,12 @@ const postProducts = require('../controllers/postProducts.js');
 const postCart = require('../controllers/postCart.js');
 const paymentGateway = require('../controllers/paymentGateway.js')
 const userGithub = require('../controllers/userGithubById.js')
-const userGoogle = require('../controllers/userGoogleById.js')
+const userGoogle = require('../controllers/userGoogleById.js');
+const getUserByName = require('../controllers/getUserByName.js');
+const findAllUsers = require('../controllers/findAllUsers.js');
+
+
+
 //Ruta para obtener todos los productos
 router.get('/products', findAllProducts);
 router.get('/products/:id', getProductById);
@@ -58,8 +63,9 @@ router.get(
   (req, res, next) => { // <- Agrega 'next' como argumento
     // Llamar a googleSignInCallback pasando req.user como argumento
     googleSignInCallback(req, res, next); // <- Pasa 'next'
-  }
-);
+  },
+
+ );
 
 router.get('/auth/github', passport.authenticate('github', { scope: ["profile", "email"] }));
 router.get(
@@ -81,5 +87,12 @@ router.get('/get/google/:googleId', userGoogle)
 
 // Ruta para Mercado Pago
 router.post("/create_preference", paymentGateway)
+
+
+//Ruta para traer todos los usuarios
+router.get('/users', findAllUsers);
+
+ //Ruta para buscar usuarios por nombre
+ router.get('/get/user/:name', getUserByName)
 
 module.exports = router;
