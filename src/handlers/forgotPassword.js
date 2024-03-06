@@ -1,10 +1,8 @@
-require('dotenv').config();
-const {HOST, PORT, EMAIL_INNOVATECH} = process.env;
+require("dotenv").config();
+const { FRONT_HOST, FRONT_PORT, EMAIL_INNOVATECH } = process.env;
 const { User } = require("../db");
 const { generateResetToken } = require("../config/generateResetToken");
-const transporter = require('../config/sendEmail');
-
-
+const transporter = require("../config/sendEmail");
 
 const forgotPassword = async (req, res) => {
   try {
@@ -13,9 +11,9 @@ const forgotPassword = async (req, res) => {
     if (!user) {
       return res.status(404).json({ message: "Usuario no encontrado" });
     }
-    const resetToken = generateResetToken; // Generar un token único
+    const resetToken = generateResetToken(); // Generar un token único
     user.resetPasswordToken = resetToken;
-    user.resetPasswordExpires = Date.now() + 3600000; // 1 hora de validez
+    user.resetPasswordExpires = new Date(Date.now() + 3600000).getTime(); // 1 hora de validez
     await user.save();
 
     // Envío de correo electrónico
@@ -23,7 +21,7 @@ const forgotPassword = async (req, res) => {
       from: EMAIL_INNOVATECH,
       to: email,
       subject: "Recuperación de contraseña",
-      html: `Haz clic en <a href="http://${HOST}:${PORT}/reset-password/${resetToken}">este enlace</a> para restablecer tu contraseña.`,
+      html: `Haz clic en <a href="http://${FRONT_HOST}:${FRONT_PORT}/reset-password/${resetToken}">este enlace</a> para restablecer tu contraseña.`,
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
@@ -34,12 +32,10 @@ const forgotPassword = async (req, res) => {
           .json({ message: "Error al enviar el correo electrónico" });
       } else {
         console.log("Correo electrónico enviado:", info.response);
-        res
-          .status(200)
-          .json({
-            message:
-              "Se ha enviado un correo electrónico con las instrucciones para restablecer la contraseña",
-          });
+        res.status(200).json({
+          message:
+            "Se ha enviado un correo electrónico con las instrucciones para restablecer la contraseña",
+        });
       }
     });
   } catch (error) {

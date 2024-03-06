@@ -23,11 +23,11 @@ const signUp = async (req, res) => {
             expiresIn: authConfig.expires,
           });
   
-          // res.json({
-          //   user: user,
-          //   token: token,
-          // })
-          return res.redirect(baseFrontURL + "/home");
+          res.json({
+            user: user,
+            token: token,
+          })
+          // return res.redirect(baseFrontURL + "/home");
         })
         .catch((err) => {
           res.status(500).json(err);

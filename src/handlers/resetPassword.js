@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt');
 
 const resetPassword = async (req, res) => {
     const { token } = req.params;
+    console.log("Token recibido:", token);
     const { password } = req.body;
     const user = await User.findOne({ where: { resetPasswordToken: token, resetPasswordExpires: { $gt: Date.now() } } });
     if (!user) {
@@ -15,6 +16,7 @@ const resetPassword = async (req, res) => {
     user.resetPasswordToken = null;
     user.resetPasswordExpires = null;
     await user.save();
+    
     res.status(200).json({ message: "Contraseña restablecida exitosamente" });
   };
 

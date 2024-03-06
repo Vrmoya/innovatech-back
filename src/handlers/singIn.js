@@ -42,6 +42,10 @@ const signIn = async (req, res) => {
               expiresIn: authConfig.expires,
             });
 
+            // res.json({
+            //   user: user,
+            //   token: token,
+            // })
             // return res.redirect(baseFrontURL + "/home");
             return res.status(200).json(user);
           }
