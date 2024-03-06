@@ -9,8 +9,11 @@ const {
     googleSignIn,
     googleSignInCallback,
     githubSignIn,
-    githubSignInCallback  
+    githubSignInCallback,
+    forgotPassword,
+    resetPassword  
   } = require('../controllers/AuthController');
+  
 const findAllProducts = require('../controllers/findAllProducts');
 const getProductById = require('../controllers/getProductById');
 const getProductByModel = require('../controllers/getProductByModel');
@@ -22,7 +25,7 @@ const userGithub = require('../controllers/userGithubById.js')
 const userGoogle = require('../controllers/userGoogleById.js');
 const getUserByName = require('../controllers/getUserByName.js');
 const findAllUsers = require('../controllers/findAllUsers.js');
-
+const deleteProducts = require('../controllers/deleteProducts.js')
 
 
 //Ruta para obtener todos los productos
@@ -32,6 +35,9 @@ router.get('/model', getProductByModel);
 
 //Ruta para crear productos
 router.post('/products', postProducts);
+
+//Ruta para eliminar productos
+router.delete('/products/:id', deleteProducts);
 
 //Ruta para crear carrito y sus items
 router.post('/cart', postCart)
@@ -94,5 +100,9 @@ router.get('/users', findAllUsers);
 
  //Ruta para buscar usuarios por nombre
  router.get('/get/user/:name', getUserByName)
+
+ // Ruta para reset password
+router.post('/forgot-password', forgotPassword);
+router.post('/reset-password/:token', resetPassword);
 
 module.exports = router;
