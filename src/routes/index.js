@@ -9,8 +9,11 @@ const {
     googleSignIn,
     googleSignInCallback,
     githubSignIn,
-    githubSignInCallback  
+    githubSignInCallback,
+    forgotPassword,
+    resetPassword  
   } = require('../controllers/AuthController');
+  
 const findAllProducts = require('../controllers/findAllProducts');
 const getProductById = require('../controllers/getProductById');
 const getProductByModel = require('../controllers/getProductByModel');
@@ -19,8 +22,17 @@ const postProducts = require('../controllers/postProducts.js');
 const postCart = require('../controllers/postCart.js');
 const paymentGateway = require('../controllers/paymentGateway.js')
 const userGithub = require('../controllers/userGithubById.js')
-const userGoogle = require('../controllers/userGoogleById.js')
 const toggleProduct = require('../controllers/toggleProduct.js')
+const userGoogle = require('../controllers/userGoogleById.js');
+const getUserByName = require('../controllers/getUserByName.js');
+const findAllUsers = require('../controllers/findAllUsers.js');
+const deleteProducts = require('../controllers/deleteProducts.js')
+const createRating = require('../controllers/createRating.js')
+const getRating = require('../controllers/getRating.js')
+const addUserData = require('../controllers/addUserData.js')
+const getUserData = require('../controllers/getUserData.js')
+
+
 //Ruta para obtener todos los productos
 router.get('/products', findAllProducts);
 router.get('/products/:id', getProductById);
@@ -28,6 +40,9 @@ router.get('/model', getProductByModel);
 
 //Ruta para crear productos
 router.post('/products', postProducts);
+
+//Ruta para eliminar productos
+router.delete('/products/:id', deleteProducts);
 
 //Ruta para crear carrito y sus items
 router.post('/cart', postCart)
@@ -61,8 +76,9 @@ router.get(
   (req, res, next) => { // <- Agrega 'next' como argumento
     // Llamar a googleSignInCallback pasando req.user como argumento
     googleSignInCallback(req, res, next); // <- Pasa 'next'
-  }
-);
+  },
+
+ );
 
 router.get('/auth/github', passport.authenticate('github', { scope: ["profile", "email"] }));
 router.get(
@@ -84,5 +100,24 @@ router.get('/get/google/:googleId', userGoogle)
 
 // Ruta para Mercado Pago
 router.post("/create_preference", paymentGateway)
+
+
+//Ruta para traer todos los usuarios
+router.get('/users', findAllUsers);
+
+ //Ruta para buscar usuarios por nombre
+ router.get('/get/user/:name', getUserByName)
+
+ // Ruta para reset password
+router.post('/forgot-password', forgotPassword);
+router.post('/reset-password/:token', resetPassword);
+
+//Rating y comentario de producto
+router.post('/create-rating',createRating);
+router.get('/get-rating',getRating);
+
+//Registro de datos personales
+router.post('/add-user-data',addUserData);
+router.get('/get-user-data',getUserData)
 
 module.exports = router;

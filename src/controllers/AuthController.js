@@ -9,6 +9,9 @@ const signUpAdmin = require("../handlers/signUpAdmin.js");
 const firstSignUpAdmin = require("../handlers/firstSignUpAdmin.js");
 const {googleSignIn,googleSignInCallback} = require("../handlers/googleSignIn.js");
 const {githubSignIn, githubSignInCallback} = require("../handlers/gitHubSingIn.js");
+const forgotPassword = require('../handlers/forgotPassword.js');
+const resetPassword = require('../handlers/resetPassword.js');
+
 
 module.exports = {
   signIn,
@@ -18,5 +21,7 @@ module.exports = {
   googleSignIn,
   googleSignInCallback,
   githubSignIn,
-  githubSignInCallback  
+  githubSignInCallback, 
+  forgotPassword, 
+  resetPassword  
 };
