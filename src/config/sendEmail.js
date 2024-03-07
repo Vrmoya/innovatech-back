@@ -14,5 +14,8 @@ const transporter = nodemailer.createTransport({
       
       pass: PASSWORD_INNOVATECH,
     },
+    tls: {
+      rejectUnauthorized: false
+    }
 });
 module.exports = transporter;
