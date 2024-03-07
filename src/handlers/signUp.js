@@ -22,7 +22,6 @@ const signUp = async (req, res) => {
           let token = jwt.sign({ user: user }, authConfig.secret, {
             expiresIn: authConfig.expires,
           });
-  
           res.json({
             user: user,
             token: token,

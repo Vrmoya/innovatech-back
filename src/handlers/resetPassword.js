@@ -1,4 +1,5 @@
 const {User} = require('../db.js')
+const {Op} = require('sequelize')
 const authConfig = require("../config/auth.js");
 const bcrypt = require('bcrypt');
 
@@ -7,7 +8,8 @@ const resetPassword = async (req, res) => {
     const { token } = req.params;
     console.log("Token recibido:", token);
     const { password } = req.body;
-    const user = await User.findOne({ where: { resetPasswordToken: token, resetPasswordExpires: { $gt: Date.now() } } });
+    const user = await User.findOne({ where: { resetPasswordToken: token, resetPasswordExpires: { [Op.gte]: Date.now() } } });
+    // const user = await User.findOne({ where: { resetPasswordToken: token } });
     if (!user) {
       return res.status(400).json({ message: "El token de restablecimiento de contraseña no es válido o ha expirado" });
     }
