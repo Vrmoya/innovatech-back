@@ -27,6 +27,10 @@ const userGoogle = require('../controllers/userGoogleById.js');
 const getUserByName = require('../controllers/getUserByName.js');
 const findAllUsers = require('../controllers/findAllUsers.js');
 const deleteProducts = require('../controllers/deleteProducts.js')
+const createRating = require('../controllers/createRating.js')
+const getRating = require('../controllers/getRating.js')
+const addUserData = require('../controllers/addUserData.js')
+const getUserData = require('../controllers/getUserData.js')
 
 
 //Ruta para obtener todos los productos
@@ -107,5 +111,13 @@ router.get('/users', findAllUsers);
  // Ruta para reset password
 router.post('/forgot-password', forgotPassword);
 router.post('/reset-password/:token', resetPassword);
+
+//Rating y comentario de producto
+router.post('/create-rating',createRating);
+router.get('/get-rating',getRating);
+
+//Registro de datos personales
+router.post('/add-user-data',addUserData);
+router.get('/get-user-data',getUserData)
 
 module.exports = router;

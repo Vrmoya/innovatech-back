@@ -5,13 +5,17 @@ const nodemailer = require('nodemailer');
 
 // Configuración de nodemailer
 const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465, // Aquí puedes usar otros servicios como SMTP si lo prefieres
-  auth: {
+    host: 'smtp-mail.outlook.com',
+    port: 587, // Aquí puedes usar otros servicios como SMTP si lo prefieres
+    secure: false,
+    auth: {
       
-      user: 'innovatechhenry@gmail.com',
+      user: EMAIL_INNOVATECH,
       
-      pass: 'Argentina1234',
+      pass: PASSWORD_INNOVATECH,
     },
+    tls: {
+      rejectUnauthorized: false
+    }
 });
 module.exports = transporter;

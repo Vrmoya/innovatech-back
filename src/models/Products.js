@@ -128,15 +128,6 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    rating: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      defaultValue: 0, // valor predeterminado
-      validate: {
-        min: 0,
-        max: 5
-      }
-    }
   });
 
   return Products;
