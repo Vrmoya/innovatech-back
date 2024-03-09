@@ -62,7 +62,7 @@ const { User, Products, Categories, Cart, CartItem } = sequelize.models;
 // Product.hasMany(Reviews);
 Products.belongsToMany(Categories, { as: 'categories', through: 'Products_Categories' });
 Categories.belongsToMany(Products, { through: 'Products_Categories' });
-User.hasMany(Cart, { as: 'carts', foreignKey: 'userId' });
+User.hasMany(Cart, { as: 'carts' });
 Cart.belongsTo(User, { as: 'user', foreignKey: 'userId' });
 Cart.hasMany(CartItem, { as: 'cartItems' });
 CartItem.belongsTo(Products, { as: 'products' });

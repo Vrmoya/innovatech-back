@@ -6,10 +6,10 @@ const loadCategories = require('./src/controllers/loadCategories.js')
 
 
 // Syncing all the models at once.
-conn.sync({ force: false }).then(() => {
+conn.sync({ force: true }).then(() => {
   console.log("DATABASE CONNECTED")
   server.listen(PORT, () => {
-    console.log(PORT+` PORT SUCCESS`); 
+    console.log(PORT + ` PORT SUCCESS`);
     loadCategories();
     loadProducts();// eslint-disable-line no-console
   });
