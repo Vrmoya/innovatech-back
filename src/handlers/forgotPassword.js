@@ -7,6 +7,7 @@ const transporter = require("../config/sendEmail");
 const forgotPassword = async (req, res) => {
   try {
     const { email } = req.body;
+    console.log(req.body, EMAIL_INNOVATECH);
     const user = await User.findOne({ where: { email } });
     if (!user) {
       return res.status(404).json({ message: "Usuario no encontrado" });
