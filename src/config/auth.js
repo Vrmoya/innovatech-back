@@ -5,6 +5,7 @@ const passport = require('passport');
 const { User } = require("../db.js");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const GitHubStrategy = require('passport-github').Strategy;
+const crypto = require('crypto'); ///Para la recuperacion de constraseña (token)
 
 passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID,
@@ -78,9 +79,25 @@ passport.deserializeUser((id, done) => {
     });
 });
 
+
+// Para el envio de emails recuperacion de contraseña y token
+
+function generateRecoveryToken(email) {
+  const token = crypto.randomBytes(20).toString('hex');
+  recoveryTokens.set(token, email);
+  return token;
+}
+
+function getRecoveryEmail(token) {
+  return recoveryTokens.get(token);
+};
+
 module.exports = {
   secret: process.env.AUTH_SECRET || "veremos",
   expires: process.env.AUTH_EXPIRES || "24h",
   rounds: process.env.AUTH_ROUNDS || 10,
-  passport: passport
-}
+  passport: passport,
+  generateRecoveryToken,
+  getRecoveryEmail
+};
+
