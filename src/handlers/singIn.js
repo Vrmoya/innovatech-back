@@ -45,7 +45,7 @@ const signIn = async (req, res) => {
             
             // return res.redirect(baseFrontURL + "/home");
             // return res.status(200).json({auth:true,token:token}); //esto es para usar jwt en front
-            return res.status(200).json({user}); //para normales
+            return res.status(200).json(user); //para normales
 
           }
         }
