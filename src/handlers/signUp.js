@@ -9,6 +9,7 @@ const transporter = require('../config/nodemailer')
 
 
 
+
 const signUp = async (req, res) => {
     console.log("Datos de la solicitud:", req.body);
     console.log("Número de rondas:", Number.parseInt(authConfig.rounds));
@@ -21,6 +22,7 @@ const signUp = async (req, res) => {
             email: req.body.email,
             password: hashedPassword,
             image: req.body.image
+        
         });
 
         // Envío de correo electrónico al registrarse
@@ -29,7 +31,8 @@ const signUp = async (req, res) => {
             to: user.email,
             subject: 'Registro Exitoso',
             html: `
-            <p>¡Hola ${user.name}! Gracias por registrarte en nuestra plataforma.</p>
+            <h3>¡Hola ${user.name}! Gracias por registrarte en nuestra plataforma.</h3>
+            <img src="https://res.cloudinary.com/ds6lr1r9k/image/upload/v1709961201/Products/pb3sw8grgfgpcycls42h.png" alt="Descripción de la imagen" style="width: 180px; height: auto; border: 1px solid #ddd; border-radius: 8px;">
             <p>Para comenzar, visita nuestra <a href="http://localhost:5173/login">página principal</a>.</p>
         `
     };
