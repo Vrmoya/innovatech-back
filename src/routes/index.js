@@ -1,19 +1,20 @@
+const axios = require('axios')
 const passport = require('passport');
 const { Router } = require('express');
 const router = Router();
 const {
-    signIn,
-    signUp,
-    signUpAdmin,
-    firstSignUpAdmin,
-    googleSignIn,
-    googleSignInCallback,
-    githubSignIn,
-    githubSignInCallback,
-    forgotPassword,
-    resetPassword  
-  } = require('../controllers/AuthController');
-  
+  signIn,
+  signUp,
+  signUpAdmin,
+  firstSignUpAdmin,
+  googleSignIn,
+  googleSignInCallback,
+  githubSignIn,
+  githubSignInCallback,
+  forgotPassword,
+  resetPassword
+} = require('../controllers/AuthController');
+
 const findAllProducts = require('../controllers/findAllProducts');
 const getProductById = require('../controllers/getProductById');
 const getProductByModel = require('../controllers/getProductByModel');
@@ -57,7 +58,7 @@ router.post('/api/admin/register', isAdmin, signUpAdmin);
 router.post('/api/signin', signIn);
 router.post('/api/signup', signUp);
 // Toggle isActive producto
-router.post('/products/toggle',toggleProduct)
+router.post('/products/toggle', toggleProduct)
 // Rutas para el inicio de sesión con Google y GitHub
 router.get(
   "/auth/google",
@@ -79,7 +80,7 @@ router.get(
     googleSignInCallback(req, res, next); // <- Pasa 'next'
   },
 
- );
+);
 
 router.get('/auth/github', passport.authenticate('github', { scope: ["profile", "email"] }));
 router.get(
@@ -107,21 +108,21 @@ router.post("/create_preference", paymentGateway)
 router.get('/users', findAllUsers);
 
 //Ruta para activar/desactivar usuario
-router.post('/user',toggleUser)
+router.post('/user', toggleUser)
 
 //Ruta para buscar usuarios por nombre
- router.get('/get/user/:name', getUserByName)
+router.get('/get/user/:name', getUserByName)
 
- // Ruta para reset password
+// Ruta para reset password
 router.post('/forgot-password', forgotPassword);
 router.post('/reset-password/:token', resetPassword);
 
 //Rating y comentario de producto
-router.post('/create-rating',createRating);
-router.get('/get-rating',getRating);
+router.post('/create-rating', createRating);
+router.get('/get-rating', getRating);
 
 //Registro de datos personales
-router.post('/add-user-data',addUserData);
-router.get('/get-user-data',getUserData)
+router.post('/add-user-data', addUserData);
+router.get('/get-user-data', getUserData)
 
 module.exports = router;
