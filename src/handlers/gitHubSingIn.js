@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { FRONT_HOST, FRONT_PORT } = process.env;
+const { FRONT_HOST, FRONT_PORT, AUTH_SECRET } = process.env;
 const baseFrontURL = `http://${FRONT_HOST}:${FRONT_PORT}`
 const passport = require('passport');
 const authConfig = require("../config/auth.js");
@@ -37,21 +37,21 @@ const githubSignInCallback = async (req, res) => {
   console.log('Random password:', randomPassword);
 
   try {
-    const email = req.user.email; // Corregir acceso a la propiedad emails
-    console.log('Email:', email); // Agregar console.log para mostrar el email
+    const githubId = req.user.githubId; // Corregir acceso a la propiedad emails
+    console.log('Email:', githubId); // Agregar console.log para mostrar el email
 
     const displayName = req.user.displayName || 'Unknown';
 
     const image = req.user.image;
 
     // Verificar si ya existe un usuario con el mismo correo electrónico
-    const existingUser = await User.findOne({ where: { email: email } });
+    const existingUser = await User.findOne({ where: { githubId: githubId } });
 
     if (existingUser) {
       console.log("User already exists:", existingUser);
 
       // Generar un token JWT para el usuario existente
-      const token = jwt.sign({ userId: existingUser.id }, 'secret', { expiresIn: '1h' }); // Cambiar 'secret' por una clave secreta segura
+      const token = jwt.sign({ userId: existingUser.id }, AUTH_SECRET, { expiresIn: '1h' }); // Cambiar 'secret' por una clave secreta segura
 
       // Enviar el token como respuesta al cliente
       res.cookie('token', token, { httpOnly: true }); // Almacenar el token en una cookie segura y httponly
@@ -68,13 +68,13 @@ const githubSignInCallback = async (req, res) => {
         password: randomPassword,
         image:image,
         isAdmin: false,
-        googleId: req.user.id.toString(),
+        githubId: req.user.id.toString(),
       });
 
       console.log("New user created:", newUser);
 
       // Generar un token JWT para el nuevo usuario
-      const token = jwt.sign({ userId: newUser.id }, 'secret', { expiresIn: '1h' }); // Cambiar 'secret' por una clave secreta segura
+      const token = jwt.sign({ userId: newUser.id }, AUTH_SECRET, { expiresIn: '1h' }); // Cambiar 'secret' por una clave secreta segura
 
       // Enviar el token como respuesta al cliente
       res.cookie('token', token, { httpOnly: true }); // Almacenar el token en una cookie segura y httponly

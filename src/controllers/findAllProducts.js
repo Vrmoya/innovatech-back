@@ -37,7 +37,7 @@ console.log(findAllProductsDbQuery);
     findAllProductsDB = await Products.findAll(findAllProductsDbQuery);
 
     // console.log(findAllProductsDB);
-    // if (page && items > 0)
+    // if (page && items > 0)npm 
       //Paginado
       if (page && items)
         findedProducts = paginate(findAllProductsDB, items, page)
