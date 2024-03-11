@@ -31,6 +31,7 @@ const createRating = require('../controllers/createRating.js')
 const getRating = require('../controllers/getRating.js')
 const addUserData = require('../controllers/addUserData.js')
 const getUserData = require('../controllers/getUserData.js')
+const toggleUser = require('../controllers/toggleUser.js')
 
 
 //Ruta para obtener todos los productos
@@ -105,7 +106,10 @@ router.post("/create_preference", paymentGateway)
 //Ruta para traer todos los usuarios
 router.get('/users', findAllUsers);
 
- //Ruta para buscar usuarios por nombre
+//Ruta para activar/desactivar usuario
+router.post('/user',toggleUser)
+
+//Ruta para buscar usuarios por nombre
  router.get('/get/user/:name', getUserByName)
 
  // Ruta para reset password
