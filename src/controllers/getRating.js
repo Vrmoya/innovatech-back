@@ -1,7 +1,7 @@
 const { Rating } = require('../db')
 
 module.exports = async (req, res) => {
-    const { productId } = req.body
+    const { productId } = req.query
 
     try {
 

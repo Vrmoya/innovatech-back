@@ -10,7 +10,7 @@ const signIn = async (req, res) => {
   let { email, password } = req.body;
 
   // Buscar al usuario en la base de datos
-  User.findOne({ where: { email: email } })
+  User.findOne({ where: { email: email, isActive: true } })
     .then((user) => {
       console.log("Usuario encontrado en la base de datos:", user); // Registro adicional
 
@@ -42,10 +42,10 @@ const signIn = async (req, res) => {
               expiresIn: authConfig.expires,
             });
 
-            
+
             // return res.redirect(baseFrontURL + "/home");
             // return res.status(200).json({auth:true,token:token}); //esto es para usar jwt en front
-            return res.status(200).json({user}); //para normales
+            return res.status(200).json(user); //para normales
 
           }
         }
