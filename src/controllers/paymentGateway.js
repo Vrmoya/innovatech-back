@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { ACCESS_TOKEN } = process.env;
+const { ACCESS_TOKEN, RUTA_NOTIFICACION } = process.env;
 const { MercadoPagoConfig, Preference } = require('mercadopago')
 
 const client = new MercadoPagoConfig({ accessToken: `${ACCESS_TOKEN}` });
@@ -25,7 +25,7 @@ const paymentGateway = async (req, res) => {
                 "failure": "http://localhost:5173/",
                 "pending": "http://localhost:5173/"
             },
-            notification_url:"https://z7b5bch3-80.brs.devtunnels.ms/responses",
+            notification_url:RUTA_NOTIFICACION,
             external_reference:req.body.email
         };
         const preference = new Preference(client);
