@@ -34,6 +34,8 @@ const addUserData = require('../controllers/addUserData.js')
 const getUserData = require('../controllers/getUserData.js')
 const toggleUser = require('../controllers/toggleUser.js')
 const notificationReceptor = require('../controllers/notificationReceptor.js')
+const getCart = require('../controllers/getCart.js')
+const getCartById = require('../controllers/getCartById.js')
 
 
 //Ruta para obtener todos los productos
@@ -47,8 +49,10 @@ router.post('/products', postProducts);
 //Ruta para eliminar productos
 router.delete('/products/:id', deleteProducts);
 
-//Ruta para crear carrito y sus items
-router.post('/cart', postCart)
+//Rutas para guardar compras en la BD y para traer info de la misma.
+router.post('/cart', postCart);
+router.get('/cart', getCart);
+router.get('/cart/:id', getCartById);
 
 //Ruta para el registro de administradores
 router.post('/api/admin/firstregister', firstSignUpAdmin);
