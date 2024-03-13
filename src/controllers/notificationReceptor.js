@@ -1,7 +1,7 @@
 const axios = require('axios')
 require('dotenv').config();
 const { ACCESS_TOKEN } = process.env;
-const { User } = require('../db')
+const { User, Cart } = require('../db')
 const { MercadoPagoConfig, Payment } = require('mercadopago')
 const emailSender = require('../helpers/emailSender')
 // Configurar el acceso al token
@@ -72,12 +72,12 @@ module.exports = async (req, res) => {
                 }
             } else { // La orden de compra no tiene envíos
                 console.log("Totalmente pagado. Libera tu artículo.");
-                emailSender(email, `<p>El estado de su pago es: ${'pago exitoso'}</p>`)
+                emailSender(email, `<p>El estado de su pago es: ${payment.status}</p>`, payment.status)
             }
         } else {
             console.log("Aún no está pagado. No liberes tu artículo.");
-            if(payment && payment.status)
-                emailSender(email, `<p>El estado de su pago es: ${payment.status}</p>`)
+            if (payment && payment.status)
+                emailSender(email, `<p>El estado de su pago es: ${payment.status}</p>`, payment.status)
         }
     } else {
         console.log("No se encontró la orden de compra o el pago correspondiente.");
