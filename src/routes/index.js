@@ -33,6 +33,7 @@ const getRating = require('../controllers/getRating.js')
 const addUserData = require('../controllers/addUserData.js')
 const getUserData = require('../controllers/getUserData.js')
 const toggleUser = require('../controllers/toggleUser.js')
+const notificationReceptor = require('../controllers/notificationReceptor.js')
 
 
 //Ruta para obtener todos los productos
@@ -102,6 +103,7 @@ router.get('/get/google/:googleId', userGoogle)
 
 // Ruta para Mercado Pago
 router.post("/create_preference", paymentGateway)
+router.post("/responses",notificationReceptor)
 
 
 //Ruta para traer todos los usuarios
