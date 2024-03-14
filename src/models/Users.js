@@ -72,6 +72,11 @@ module.exports = (sequelize) => {
       type: DataTypes.DATE,
       allowNull: true,
     },
+    productsReviewed:{
+      type:DataTypes.ARRAY(DataTypes.INTEGER),
+      allowNull:true,
+      defaultValue:null,
+    }
   });
   
 

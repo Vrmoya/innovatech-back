@@ -23,17 +23,21 @@ module.exports = async (email, html, status) => {
                     subject: "Estado del pago en MercadoPago",
                     html,
                 };
-                transporter.sendMail(mailOptions, function (error, info) {
-                    if (error) {
-                        console.log(error);
-                    } else {
-                        console.log("Email enviado: " + info.response);
-                    }
-                });
-
+                // try {
+                //     transporter.sendMail(mailOptions, function (error, info) {
+                //         if (error) {
+                //             console.log(error);
+                //         } else {
+                //             console.log("Email enviado: " + info.response);
+                //         }
+                //     });
+                // } catch (err) {
+                //     console.log(err.message);
+                // }
 
                 // Assuming you want to modify the first cart found for the user
-                const cart = user.carts[0]; // Access the cart
+                console.log(user.carts);
+                const cart = user.carts.pop(); // Access the cart
 
                 if (cart) {
                     // Modify the key here, for example, changing the value of a key called 'keyName'

@@ -36,6 +36,7 @@ const toggleUser = require('../controllers/toggleUser.js')
 const notificationReceptor = require('../controllers/notificationReceptor.js')
 const getCart = require('../controllers/getCart.js')
 const getCartById = require('../controllers/getCartById.js')
+const checkBoughtProduct = require('../controllers/checkBoughtProduct.js')
 
 
 //Ruta para obtener todos los productos
@@ -116,6 +117,8 @@ router.get('/users', findAllUsers);
 //Ruta para activar/desactivar usuario
 router.post('/user', toggleUser)
 
+
+
 //Ruta para buscar usuarios por nombre
 router.get('/get/user/:name', getUserByName)
 
@@ -126,6 +129,8 @@ router.post('/reset-password/:token', resetPassword);
 //Rating y comentario de producto
 router.post('/create-rating', createRating);
 router.get('/get-rating', getRating);
+//Ruta para checkear si el usuario puede hacer la review (si compro el producto o si ya la hizo)
+router.get('/check/user-product',checkBoughtProduct)
 
 //Registro de datos personales
 router.post('/add-user-data', addUserData);
