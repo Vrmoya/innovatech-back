@@ -14,27 +14,6 @@ module.exports = async (email, html, status) => {
         .then(user => {
             if (user) {
 
-                // Verificar si se encontró el usuario y obtener su dirección de correo electrónico
-                const userEmailAddress = user.email;
-                // Envío de correo electrónico
-                const mailOptions = {
-                    from: EMAIL_INNOVATECH,
-                    to: userEmailAddress,
-                    subject: "Estado del pago en MercadoPago",
-                    html,
-                };
-                // try {
-                //     transporter.sendMail(mailOptions, function (error, info) {
-                //         if (error) {
-                //             console.log(error);
-                //         } else {
-                //             console.log("Email enviado: " + info.response);
-                //         }
-                //     });
-                // } catch (err) {
-                //     console.log(err.message);
-                // }
-
                 // Assuming you want to modify the first cart found for the user
                 console.log(user.carts);
                 const cart = user.carts.pop(); // Access the cart
@@ -44,7 +23,25 @@ module.exports = async (email, html, status) => {
                     cart.payment_status = status;
 
                     // Save the changes
-                    return cart.save();
+                    cart.save();
+
+                    // Verificar si se encontró el usuario y obtener su dirección de correo electrónico
+                    const userEmailAddress = user.email;
+                    // Envío de correo electrónico
+                    const mailOptions = {
+                        from: EMAIL_INNOVATECH,
+                        to: userEmailAddress,
+                        subject: "Estado del pago en MercadoPago",
+                        html,
+                    };
+
+                    transporter.sendMail(mailOptions, function (error, info) {
+                        if (error) {
+                            console.log(error);
+                        } else {
+                            console.log("Email enviado: " + info.response);
+                        }
+                    });
                 } else {
                     console.log('User has no carts.');
                 }
