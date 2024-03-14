@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { ACCESS_TOKEN, RUTA_NOTIFICACION } = process.env;
+const { ACCESS_TOKEN, RUTA_NOTIFICACION,FRONT_HOST,FRONT_PORT } = process.env;
 const { MercadoPagoConfig, Preference } = require('mercadopago')
 
 const client = new MercadoPagoConfig({ accessToken: `${ACCESS_TOKEN}` });
@@ -21,9 +21,9 @@ const paymentGateway = async (req, res) => {
             items: itemsForBackend,
             total: req.body.total,
             back_urls: {
-                "success": "http://localhost:5173/",
-                "failure": "http://localhost:5173/",
-                "pending": "http://localhost:5173/"
+                "success": `http://${FRONT_HOST}:${FRONT_PORT}/home`,
+                "failure": `http://${FRONT_HOST}:${FRONT_PORT}/home`,
+                "pending": `http://${FRONT_HOST}:${FRONT_PORT}/home`
             },
             notification_url:RUTA_NOTIFICACION,
             external_reference:req.body.email
