@@ -19,6 +19,10 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING(25),
             allowNull: false,
         },
+        payment_status:{
+            type: DataTypes.STRING(40),
+            allowNull: true
+        }
     });
 
     return Cart;

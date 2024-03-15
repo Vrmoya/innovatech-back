@@ -23,8 +23,14 @@ const loadProducts = async () => {
         }
       })
       delete products[i].category;
-      const createdProduct = await Products.create(products[i]);;
-      const result = await createdProduct.addCategories(findedCategory[0].dataValues.id);
+      const [createdProduct,wasCreated] = await Products.findOrCreate({
+        where: { model: products[i].model },
+        defaults: products[i]
+      }
+
+      );
+      if(wasCreated);
+        const result = await createdProduct.addCategories(findedCategory[0].dataValues.id);
     }
     console.log('Productos cargados exitosamente');
   } catch (error) {

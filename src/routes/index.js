@@ -33,6 +33,10 @@ const getRating = require('../controllers/getRating.js')
 const addUserData = require('../controllers/addUserData.js')
 const getUserData = require('../controllers/getUserData.js')
 const toggleUser = require('../controllers/toggleUser.js')
+const notificationReceptor = require('../controllers/notificationReceptor.js')
+const getCart = require('../controllers/getCart.js')
+const getCartById = require('../controllers/getCartById.js')
+const checkBoughtProduct = require('../controllers/checkBoughtProduct.js')
 
 
 //Ruta para obtener todos los productos
@@ -46,8 +50,10 @@ router.post('/products', postProducts);
 //Ruta para eliminar productos
 router.delete('/products/:id', deleteProducts);
 
-//Ruta para crear carrito y sus items
-router.post('/cart', postCart)
+//Rutas para guardar compras en la BD y para traer info de la misma.
+router.post('/cart', postCart);
+router.get('/cart', getCart);
+router.get('/cart/:id', getCartById);
 
 //Ruta para el registro de administradores
 router.post('/api/admin/firstregister', firstSignUpAdmin);
@@ -102,6 +108,7 @@ router.get('/get/google/:googleId', userGoogle)
 
 // Ruta para Mercado Pago
 router.post("/create_preference", paymentGateway)
+router.post("/responses",notificationReceptor)
 
 
 //Ruta para traer todos los usuarios
@@ -109,6 +116,8 @@ router.get('/users', findAllUsers);
 
 //Ruta para activar/desactivar usuario
 router.post('/user', toggleUser)
+
+
 
 //Ruta para buscar usuarios por nombre
 router.get('/get/user/:name', getUserByName)
@@ -120,6 +129,8 @@ router.post('/reset-password/:token', resetPassword);
 //Rating y comentario de producto
 router.post('/create-rating', createRating);
 router.get('/get-rating', getRating);
+//Ruta para checkear si el usuario puede hacer la review (si compro el producto o si ya la hizo)
+router.get('/check/user-product',checkBoughtProduct)
 
 //Registro de datos personales
 router.post('/add-user-data', addUserData);

@@ -3,6 +3,7 @@ const { Cart, CartItem, User } = require("../db.js");
 const postCart = async (req, res) => {
     try {
         const cartData = req.body;
+        console.log(cartData);
         const id = req.body.idUserLocal;
         const user = await User.findByPk(id);
 

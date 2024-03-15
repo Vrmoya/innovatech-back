@@ -63,11 +63,12 @@ const { User, Products, Categories, Cart, CartItem, Rating, Register } = sequeli
 Products.belongsToMany(Categories, { as: 'categories', through: 'Products_Categories' });
 Products.hasMany(Rating, { as: 'rating' });
 Categories.belongsToMany(Products, { through: 'Products_Categories' });
-User.hasMany(Cart, { as: 'carts' });
 User.hasOne(Register, { as: 'register', foreignKey: 'userId' })
-Cart.belongsTo(User, { as: 'user', foreignKey: 'userId' });
-Cart.hasMany(CartItem, { as: 'cartItems' });
-CartItem.belongsTo(Products, { as: 'products' });
+User.hasMany(Cart, { as: 'carts', foreignKey: 'userId'  });
+Cart.belongsTo(User, { as: 'user' });
+CartItem.belongsTo(Products, { as: 'products',foreignKey:'productId' });
+Products.hasMany(CartItem, { as: 'itemProducts',foreignKey:'productId' });
+Cart.hasMany(CartItem, { as: 'cartItems', foreignKey: 'cartId'  });
 CartItem.belongsTo(Cart, { as: 'cart', foreignKey: 'cartId' });
 
 
