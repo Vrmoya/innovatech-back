@@ -20,7 +20,9 @@ module.exports = async (req, res) => {
         const uniqueProductsIdArray = [...uniqueProductsId]
 
         //Verifico que el producto recibido por req se encuentre en la compra ya pagada.
-        if (uniqueProductsIdArray.includes(productId) === false) {
+        console.log(uniqueProductsIdArray.includes(Number(productId)));
+        console.log(uniqueProductsIdArray,Number(productId));
+        if (uniqueProductsIdArray.includes(Number(productId)) === false) {
             response.canReview = false
             return res.status(200).json(response)
         }else{
@@ -28,9 +30,10 @@ module.exports = async (req, res) => {
         }
         //Obtengo el array de los id de productos ya con review por el usuario
         const user = await User.findByPk(userId);
+
         if (!user.productsReviewed)
             response.canReview = true;
-        else if (user.productsReviewed.includes(productId)){
+        else if (user.productsReviewed.includes(Number(productId))){
             response.canReview = false;
             response.alreadyReviewed = true;
         }
