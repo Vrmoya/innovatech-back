@@ -36,11 +36,11 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    usetype: {
+    useType: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    Ram: {
+    ram: {
       type: DataTypes.STRING,
       allowNull: true,
     },
@@ -76,7 +76,7 @@ module.exports = (sequelize) => {
       type: DataTypes.TEXT,
       allowNull: true,
     },
-    internalmemory: {
+    internalMemory: {
       type: DataTypes.STRING,
       allowNull: true,
     },
@@ -92,7 +92,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    extrafunctions: {
+    extraFunctions: {
       type: DataTypes.STRING,
       allowNull: true,
     },
